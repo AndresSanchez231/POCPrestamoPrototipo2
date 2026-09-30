@@ -1,0 +1,30 @@
+type Prestamo {
+    idPrestamo: Int
+    monto: Float
+    tasaIntereses: Float
+    fechaRegistro: String
+    tipo: String
+    estado: Boolean
+}
+
+input PrestamoInput {
+    idPrestamo: Int!
+    monto: Float!
+    tasaIntereses: Float!
+    fechaRegistro: String!
+    tipo: String!
+    estado: Boolean!
+}
+
+type Query {
+    prestamos: [Prestamo]
+    prestamoPorId(idPrestamo: Int!): Prestamo
+    prestamosPorTipoInmueble(tipoInmueble: String!): [Prestamo]
+    prestamosPorMontoMinimo(montoMinimo: Float!): [Prestamo]
+}
+
+type Mutation {
+    addPrestamo(input: PrestamoInput!): Prestamo
+    actualizarPrestamo(idPrestamo: Int!, input: PrestamoInput!): Prestamo
+    eliminarPrestamo(idPrestamo: Int!): Boolean
+}
