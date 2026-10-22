@@ -3,8 +3,9 @@ package org.example.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -15,5 +16,8 @@ public class Prestamo {
     private double tasaIntereses;
     private LocalDateTime fechaRegistro;
     private String tipo;
-    private boolean estado; // true = activo, false = inactivo
+    private boolean estado;
+
+    // Relación 1 a N
+    private List<Cliente> clientes = new ArrayList<>();
 }

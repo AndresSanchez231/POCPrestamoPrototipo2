@@ -1,70 +1,82 @@
 package org.example.servicios;
 
+import org.example.builder.PrestamoBuilder;
 import org.example.model.Prestamo;
 import org.example.model.PrestamoInput;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ServicioPrestamo {
-
     private static final List<Prestamo> prestamos = new ArrayList<>(List.of(
-            new Prestamo(1, 150000000.0, 10.5, LocalDateTime.of(2026, 1, 15, 10, 30), "Casa", true),
-            new Prestamo(2, 45000000.0, 14.2, LocalDateTime.of(2026, 2, 20, 15, 45), "Apartamento", true),
-            new Prestamo(3, 80000000.0, 11.0, LocalDateTime.of(2026, 3, 5, 9, 0), "Local Comercial", true)
+            new Prestamo(1, 150000000.0, 10.5, LocalDateTime.of(2026, 1, 15, 10, 30), "Casa", true, new ArrayList<>())
     ));
 
-    // READ - listar todos (activos e inactivos)
     public static List<Prestamo> listarPrestamos() {
         return prestamos;
     }
 
-    // READ - buscar por id
     public static Optional<Prestamo> buscarPorId(int idPrestamo) {
-        return prestamos.stream()
-                .filter(p -> p.getIdPrestamo() == idPrestamo)
-                .findFirst();
+        return prestamos.stream().filter(p -> p.getIdPrestamo() == idPrestamo).findFirst();
     }
 
-    // READ - listar por tipo
-    public static List<Prestamo> listarPorTipoInmueble(String tipoInmueble) {
+    public static List<Prestamo> listarPorTipoInmueble(String tipo) {
         return prestamos.stream()
-                .filter(p -> p.getTipo().equalsIgnoreCase(tipoInmueble))
+                .filter(p -> p.getTipo().equalsIgnoreCase(tipo))
+                .filter(Prestamo::isEstado)
                 .toList();
     }
 
-    // READ - listar por monto mínimo
-    public static List<Prestamo> listarPorMontoMinimo(double montoMinimo) {
-        return prestamos.stream()
-                .filter(p -> p.getMonto() >= montoMinimo)
-                .toList();
+    // VALIDACIÓN ESTRICTA
+    private static void validarDatosPrestamo(PrestamoInput input) {
+        List<String> tiposPermitidos = List.of("Casa", "Apartamento", "Local Comercial");
+        boolean esValido = tiposPermitidos.stream().anyMatch(t -> t.equalsIgnoreCase(input.tipo()));
+
+        if (!esValido) {
+            throw new RuntimeException("Tipo de inmueble inválido. Debe ser: Casa, Apartamento o Local Comercial.");
+        }
+        if (input.monto() <= 0) {
+            throw new RuntimeException("El monto debe ser mayor a cero.");
+        }
+        if (input.tasaIntereses() <= 0) {
+            throw new RuntimeException("La tasa de interés debe ser mayor a cero.");
+        }
     }
 
-    // CREATE
-    public static Optional<Prestamo> addPrestamo(PrestamoInput input) {
+    public static Prestamo addPrestamo(PrestamoInput input) {
+        validarDatosPrestamo(input); // Valida datos primero
+
         if (buscarPorId(input.idPrestamo()).isPresent()) {
-            return Optional.empty();
+            throw new RuntimeException("El ID " + input.idPrestamo() + " ya existe.");
         }
-        Prestamo p = new Prestamo(
-                input.idPrestamo(),
-                input.monto(),
-                input.tasaIntereses(),
-                input.fechaRegistro(),
-                input.tipo(),
-                true  // nuevo préstamo siempre activo
-        );
-        prestamos.add(p);
-        return Optional.of(p);
+
+        Prestamo nuevo = new PrestamoBuilder()
+                .setIdPrestamo(input.idPrestamo())
+                .setMonto(input.monto())
+                .setTasaIntereses(input.tasaIntereses())
+                .setFechaRegistro(input.fechaRegistro())
+                .setTipo(input.tipo())
+                .setEstado(input.estado())
+                .build();
+
+        prestamos.add(nuevo);
+        return nuevo;
     }
 
-    // UPDATE
     public static Optional<Prestamo> actualizarPrestamo(int idPrestamo, PrestamoInput input) {
+        validarDatosPrestamo(input);
+
         Optional<Prestamo> existente = buscarPorId(idPrestamo);
-        if (existente.isEmpty()) {
-            return Optional.empty();
+        if (existente.isEmpty()) return Optional.empty();
+
+        if (!existente.get().isEstado()) {
+            throw new RuntimeException("El préstamo con ID " + idPrestamo + " está INACTIVO y no se puede actualizar.");
         }
+
         Prestamo p = existente.get();
         p.setMonto(input.monto());
         p.setTasaIntereses(input.tasaIntereses());
@@ -74,13 +86,10 @@ public class ServicioPrestamo {
         return Optional.of(p);
     }
 
-    // DELETE - ahora es borrado lógico
     public static boolean eliminarPrestamo(int idPrestamo) {
         Optional<Prestamo> existente = buscarPorId(idPrestamo);
-        if (existente.isEmpty()) {
-            return false;
-        }
-        existente.get().setEstado(false); // solo se marca como inactivo
+        if (existente.isEmpty()) return false;
+        existente.get().setEstado(false);
         return true;
     }
 }

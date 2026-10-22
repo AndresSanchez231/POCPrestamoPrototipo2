@@ -1,3 +1,13 @@
+type Cliente {
+    idCliente: Int
+    nombreCompleto: String
+    cedula: String
+    ingresosMensuales: Float
+    fechaNacimiento: String
+    idPrestamo: Int
+    estado: Boolean
+}
+
 type Prestamo {
     idPrestamo: Int
     monto: Float
@@ -5,6 +15,17 @@ type Prestamo {
     fechaRegistro: String
     tipo: String
     estado: Boolean
+    clientes: [Cliente]
+}
+
+input ClienteInput {
+    idCliente: Int!
+    nombreCompleto: String!
+    cedula: String!
+    ingresosMensuales: Float!
+    fechaNacimiento: String!
+    idPrestamo: Int!
+    estado: Boolean!
 }
 
 input PrestamoInput {
@@ -19,12 +40,18 @@ input PrestamoInput {
 type Query {
     prestamos: [Prestamo]
     prestamoPorId(idPrestamo: Int!): Prestamo
-    prestamosPorTipoInmueble(tipoInmueble: String!): [Prestamo]
-    prestamosPorMontoMinimo(montoMinimo: Float!): [Prestamo]
+    prestamosPorTipoInmueble(tipoInmueble: String!): [Prestamo]  # <-- ESTA ES LA LÍNEA QUE FALTABA
+    clientes: [Cliente]
+    clientesPorPrestamo(idPrestamo: Int!): [Cliente]
+    clientePorId(idCliente: Int!): Cliente
 }
 
 type Mutation {
     addPrestamo(input: PrestamoInput!): Prestamo
     actualizarPrestamo(idPrestamo: Int!, input: PrestamoInput!): Prestamo
     eliminarPrestamo(idPrestamo: Int!): Boolean
+
+    addCliente(input: ClienteInput!): Cliente
+    actualizarCliente(idCliente: Int!, input: ClienteInput!): Cliente
+    eliminarCliente(idCliente: Int!): Boolean
 }

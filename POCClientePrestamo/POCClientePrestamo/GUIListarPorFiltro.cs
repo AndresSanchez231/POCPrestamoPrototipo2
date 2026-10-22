@@ -1,76 +1,48 @@
 ﻿using System;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Windows.Forms;
-using GraphQL;
-using GraphQL.Client.Http;
-using GraphQL.Client.Serializer.SystemTextJson;
-using POCClientePrestamo.model;
+using POCClientePrestamo.services;
 
 namespace POCClientePrestamo
 {
     public partial class GUIListarPorFiltro : Form
     {
+        private readonly PrestamoService _prestamoService = new PrestamoService();
+
         public GUIListarPorFiltro()
         {
             InitializeComponent();
         }
 
+        // Método que faltaba
         private void GUIListarPorFiltro_Load(object sender, EventArgs e)
         {
-            // Vacío por ahora. El usuario debe seleccionar un tipo.
+            // Vacío por ahora
         }
 
         private async void btnFiltrar_Click(object sender, EventArgs e)
         {
-            await filtrarPrestamos();
-        }
-
-        private async Task filtrarPrestamos()
-        {
             try
             {
-                // Validar que se haya seleccionado un tipo
                 if (string.IsNullOrWhiteSpace(cmbTipoInmueble.Text))
                 {
-                    MessageBox.Show("Por favor, seleccione un tipo de inmueble para filtrar.");
+                    MessageBox.Show("Seleccione un tipo de inmueble.");
                     return;
                 }
 
-                var client = new GraphQLHttpClient(
-                    "http://localhost:8080/graphql",
-                    new SystemTextJsonSerializer());
-
-                var request = new GraphQLRequest
-                {
-                    Query = @"
-                        query filtrarPorTipo ($tipoInmueble: String!) {
-                            prestamosPorTipoInmueble(tipoInmueble: $tipoInmueble) {
-                                idPrestamo
-                                monto
-                                tasaIntereses
-                                fechaRegistro
-                                tipo
-                                estado
-                            }
-                        }
-                    ",
-                    Variables = new { tipoInmueble = cmbTipoInmueble.Text }
-                };
-
-                var response = await client.SendQueryAsync<ResponseListaPorTipo>(request);
-
-                if (response.Errors != null && response.Errors.Length > 0)
-                {
-                    MessageBox.Show("Error: " + response.Errors[0].Message);
-                    return;
-                }
-
+                var prestamos = await _prestamoService.ListarPorTipoInmuebleAsync(cmbTipoInmueble.Text);
                 dgvFiltro.DataSource = null;
 
-                var listaParaMostrar = new System.Collections.Generic.List<object>();
-                foreach (var p in response.Data.prestamos)
+                if (prestamos == null || prestamos.Count == 0)
                 {
-                    listaParaMostrar.Add(new
+                    MessageBox.Show("No se encontraron préstamos con ese tipo.");
+                    return;
+                }
+
+                var lista = new List<object>();
+                foreach (var p in prestamos)
+                {
+                    lista.Add(new
                     {
                         ID = p.idPrestamo,
                         Monto = p.monto,
@@ -81,12 +53,7 @@ namespace POCClientePrestamo
                     });
                 }
 
-                if (listaParaMostrar.Count == 0)
-                {
-                    MessageBox.Show("No se encontraron préstamos con ese tipo de inmueble.");
-                }
-
-                dgvFiltro.DataSource = listaParaMostrar;
+                dgvFiltro.DataSource = lista;
             }
             catch (Exception ex)
             {

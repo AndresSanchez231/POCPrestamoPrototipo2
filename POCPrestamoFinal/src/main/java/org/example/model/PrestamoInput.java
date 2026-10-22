@@ -1,6 +1,7 @@
 package org.example.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public record PrestamoInput(
         int idPrestamo,
@@ -8,6 +9,6 @@ public record PrestamoInput(
         double tasaIntereses,
         LocalDateTime fechaRegistro,
         String tipo,
-        boolean estado
-) {
-}
+        boolean estado,
+        List<ClienteInput> clientes // Lista de clientes
+) {}

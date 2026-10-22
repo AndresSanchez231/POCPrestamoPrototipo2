@@ -10,47 +10,77 @@ namespace POCClientePrestamo
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Vacío por ahora
-        }
+        private void Form1_Load(object sender, EventArgs e) { }
 
+        // ==========================================
+        // PRÉSTAMOS
+        // ==========================================
         private void insertarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUIAddPrestamo gui = new GUIAddPrestamo();
-            gui.Show();
+            new GUIAddPrestamo().Show();
         }
 
         private void consultarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUIBuscarPrestamo gui = new GUIBuscarPrestamo();
-            gui.Show();
+            new GUIBuscarPrestamo().Show();
         }
 
         private void eliminarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUIEliminarPrestamo gui = new GUIEliminarPrestamo();
-            gui.Show();
+            new GUIEliminarPrestamo().Show();
         }
 
         private void actualizarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUIActualizarPrestamo gui = new GUIActualizarPrestamo();
-            gui.Show();
+            new GUIActualizarPrestamo().Show();
         }
 
         private void listarPrestamosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUIListarPrestamos gui = new GUIListarPrestamos();
-            gui.Show();
+            new GUIListarPrestamos().Show();
         }
 
         private void listarPorFiltroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUIListarPorFiltro gui = new GUIListarPorFiltro();
-            gui.Show();
+            new GUIListarPorFiltro().Show();
         }
 
+        // ==========================================
+        // CLIENTES
+        // ==========================================
+        private void agregarClienteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            new GUIAddCliente().Show();
+        }
+
+        private void listarClientesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            new GUIListarClientes().Show();
+        }
+
+        private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GUIBuscarCliente().Show();
+        }
+
+        private void actualizarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GUIActualizarCliente().Show();
+        }
+
+        private void eliminarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GUIEliminarCliente().Show();
+        }
+
+        private void listarTodosClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GUIListarTodosClientes().Show();
+        }
+
+        // ==========================================
+        // AYUDA
+        // ==========================================
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
@@ -58,8 +88,7 @@ namespace POCClientePrestamo
                 "Versión: 1.0\n" +
                 "Integrantes:\n" +
                 "- Andres Felipe Sanchez\n" +
-                "- Juan Pablo Valbuena\n" 
-               ,
+                "- Juan Pablo Valbuena\n",
                 "Acerca de...",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);

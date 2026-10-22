@@ -1,98 +1,194 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\model\\responseprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\model\\responseprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guieliminarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guieliminarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiaddcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guilistarporfiltro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarporfiltro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guilistarprestamos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarprestamos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guilistarprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistarprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guilistarprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guieliminarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guieliminarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guieliminarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guieliminarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guieliminarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guibuscarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistartodosclientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistartodosclientes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistarprestamos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarprestamos.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guieliminarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guieliminarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guieliminarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guieliminarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistartodosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistartodosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistartodosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistartodosclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\model\\responseprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\model\\responseprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\services\\clienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\gestoreventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\gestoreventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarcliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarcliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guieliminarcliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guieliminarcliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\model\\clienteinputbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\model\\clienteinputbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\model\\prestamoinputbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\model\\prestamoinputbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guieliminarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guieliminarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guibuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiaddcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guibuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiaddcliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddcliente.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiaddcliente.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddcliente.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guiaddprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\services\\prestamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\services\\prestamoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocclienteprestamo\\pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarporfiltro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guilistarporfiltro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarporfiltro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\pocclienteprestamo\\guilistarprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guilistarprestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{79B8D3EF-EBAE-496A-9AAF-92117697C226}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiactualizarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiactualizarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guibuscarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guibuscarprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|c:\\users\\user\\onedrive\\escritorio\\pocprestamoprototipo2\\pocclienteprestamo\\pocclienteprestamo\\guiaddprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBAC2C73-97D7-F9FA-6EC4-B0A925E47A43}|POCClientePrestamo\\POCClientePrestamo.csproj|solutionrelative:pocclienteprestamo\\guiaddprestamo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,130 +202,344 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
-              "RelativeToolTip": "POCClientePrestamo\\Form1.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswEAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T04:47:19.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GUIListarPorFiltro.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAowF0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T01:27:31.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GUIListarPorFiltro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPorFiltro.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POCClientePrestamo\\GUIListarPorFiltro.cs [Dise\u00F1o]",
+              "Title": "GUIAddCliente.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIAddCliente.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T01:15:40.045Z",
+              "WhenOpened": "2026-10-20T06:23:40.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GUIActualizarCliente.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIActualizarCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarCliente.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIActualizarCliente.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwF8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T16:07:14.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GUIListarClientes.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarClientes.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarClientes.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarClientes.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarClientes.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAIwFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T06:49:56.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GUIEliminarPrestamo.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAIwMkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T04:35:53.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GUIListarClientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarClientes.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarClientes.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarClientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarClientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T06:49:45.063Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "GUIListarPrestamos.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPrestamos.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs",
               "RelativeToolTip": "POCClientePrestamo\\GUIListarPrestamos.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowFMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwDEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-29T22:35:02.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GUIActualizarPrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIActualizarPrestamo.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIActualizarPrestamo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T06:21:09.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GUIListarPorFiltro.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPorFiltro.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIListarPorFiltro.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T01:27:45.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ResponsePrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\model\\ResponsePrestamo.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\model\\ResponsePrestamo.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\model\\ResponsePrestamo.cs",
-              "RelativeToolTip": "POCClientePrestamo\\model\\ResponsePrestamo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Title": "GUIEliminarCliente.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarCliente.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarCliente.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAIwGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T00:21:31.202Z",
+              "WhenOpened": "2026-10-20T16:34:57.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GUIEliminarPrestamo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarPrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarPrestamo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T16:37:44.262Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GUIEliminarPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarPrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarPrestamo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T04:23:56.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "GUIListarTodosClientes.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarTodosClientes.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarTodosClientes.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarTodosClientes.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarTodosClientes.Designer.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwEUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T09:03:11.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GUIListarPrestamos.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.Designer.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPrestamos.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.Designer.cs",
               "RelativeToolTip": "POCClientePrestamo\\GUIListarPrestamos.Designer.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowEQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwEUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-29T22:39:05.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GUIListarPrestamos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPrestamos.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POCClientePrestamo\\GUIListarPrestamos.cs [Dise\u00F1o]",
+              "DocumentIndex": 11,
+              "Title": "GUIActualizarPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIActualizarPrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIActualizarPrestamo.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwF8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T22:34:17.168Z",
+              "WhenOpened": "2026-09-29T06:21:09.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GUIAddPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddPrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIAddPrestamo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T05:45:40.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GUIListarTodosClientes.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarTodosClientes.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarTodosClientes.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarTodosClientes.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarTodosClientes.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAIwEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T08:11:00.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Form1.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\Form1.Designer.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAANEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T05:20:59.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\Form1.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
+              "RelativeToolTip": "POCClientePrestamo\\Form1.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T04:47:19.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GUIListarTodosClientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarTodosClientes.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarTodosClientes.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarTodosClientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarTodosClientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T08:07:29.426Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
+              "Title": "GestorEventos.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GestorEventos.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GestorEventos.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GestorEventos.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GestorEventos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T07:59:00.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GUIEliminarCliente.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarCliente.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarCliente.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarCliente.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarCliente.Designer.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAIwOwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T21:46:03.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClienteService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Services\\ClienteService.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\Services\\ClienteService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Services\\ClienteService.cs",
+              "RelativeToolTip": "POCClientePrestamo\\Services\\ClienteService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswKgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T04:59:06.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ResponsePrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\model\\ResponsePrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\model\\ResponsePrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\model\\ResponsePrestamo.cs",
+              "RelativeToolTip": "POCClientePrestamo\\model\\ResponsePrestamo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T00:21:31.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GUIActualizarCliente.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarCliente.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIActualizarCliente.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarCliente.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIActualizarCliente.Designer.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAIwOMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T21:52:11.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PrestamoInputBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\model\\PrestamoInputBuilder.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\model\\PrestamoInputBuilder.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\model\\PrestamoInputBuilder.cs",
+              "RelativeToolTip": "POCClientePrestamo\\model\\PrestamoInputBuilder.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAIwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T16:53:14.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClienteInputBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\model\\ClienteInputBuilder.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\model\\ClienteInputBuilder.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\model\\ClienteInputBuilder.cs",
+              "RelativeToolTip": "POCClientePrestamo\\model\\ClienteInputBuilder.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwDYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T16:54:22.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GUIEliminarCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T16:21:56.452Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GUIBuscarCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T15:06:52.274Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "POCClientePrestamo\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-29T22:29:51.748Z",
@@ -237,24 +547,135 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.Designer.cs",
-              "RelativeToolTip": "POCClientePrestamo\\Form1.Designer.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAowJIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "GUIBuscarPrestamo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarPrestamo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T05:20:59.889Z",
+              "WhenOpened": "2026-10-20T16:38:04.081Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GUIBuscarPrestamo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T22:38:01.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "GUIAddCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIAddCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T06:20:02.406Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "GUIActualizarCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIActualizarCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIActualizarCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T15:18:43.219Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GUIBuscarCliente.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarCliente.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarCliente.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarCliente.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarCliente.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAIwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T15:14:47.571Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 32,
+              "Title": "GUIAddCliente.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddCliente.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIAddCliente.Designer.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAIwM4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T07:05:07.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "GUIAddCliente.resx",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.resx",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddCliente.resx",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddCliente.resx",
+              "RelativeToolTip": "POCClientePrestamo\\GUIAddCliente.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-10-20T07:05:02.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "GUIBuscarPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarPrestamo.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T22:36:32.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GUIListarPorFiltro.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPorFiltro.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarPorFiltro.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwD8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T01:27:45.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PrestamoService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Services\\PrestamoService.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\Services\\PrestamoService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Services\\PrestamoService.cs",
+              "RelativeToolTip": "POCClientePrestamo\\Services\\PrestamoService.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAIwLUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-20T00:26:23.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "GUIAddPrestamo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddPrestamo.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs [Dise\u00F1o]",
               "RelativeToolTip": "POCClientePrestamo\\GUIAddPrestamo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-29T16:08:56.648Z",
@@ -262,134 +683,110 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GUIEliminarPrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarPrestamo.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarPrestamo.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAADwv5QAAAABAAAAAAAAAA==",
+              "DocumentIndex": 38,
+              "Title": "GUIListarPorFiltro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPorFiltro.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarPorFiltro.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T04:23:56.814Z"
+              "WhenOpened": "2026-09-30T01:15:40.045Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 39,
+              "Title": "GUIListarPorFiltro.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIListarPorFiltro.Designer.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAowEcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T01:27:31.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "GUIListarPrestamos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIListarPrestamos.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\POCClientePrestamo\\POCClientePrestamo\\GUIListarPrestamos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-29T22:34:17.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\Form1.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POCClientePrestamo\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\POCClientePrestamo\\POCClientePrestamo\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T05:28:50.726Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 42,
               "Title": "GUIActualizarPrestamo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\GUIActualizarPrestamo.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POCClientePrestamo\\GUIActualizarPrestamo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T06:59:58.576Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-09-29T06:59:58.576Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 43,
               "Title": "GUIAddPrestamo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddPrestamo.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POCClientePrestamo\\GUIAddPrestamo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T06:19:04.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 44,
               "Title": "GUIActualizarPrestamo.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.Designer.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\GUIActualizarPrestamo.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIActualizarPrestamo.Designer.cs",
               "RelativeToolTip": "POCClientePrestamo\\GUIActualizarPrestamo.Designer.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAADwv7YAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T06:57:25.214Z",
+              "WhenOpened": "2026-09-29T06:57:25.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "GUIBuscarPrestamo.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
+              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
+              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAADwvzUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T22:33:24.569Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "GUIEliminarPrestamo.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIEliminarPrestamo.Designer.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAADwv28AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T04:35:53.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GUIBuscarPrestamo.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarPrestamo.Designer.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAADwvzUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T22:33:24.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "GUIBuscarPrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarPrestamo.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarPrestamo.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAADwv04AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T22:36:32.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 46,
               "Title": "GUIAddPrestamo.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.Designer.cs",
               "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddPrestamo.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.Designer.cs",
               "RelativeToolTip": "POCClientePrestamo\\GUIAddPrestamo.Designer.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAqwK8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T06:21:08.054Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "GUIAddPrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIAddPrestamo.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIAddPrestamo.cs",
-              "RelativeToolTip": "POCClientePrestamo\\GUIAddPrestamo.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAGwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T05:45:40.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GUIBuscarPrestamo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs",
-              "RelativeDocumentMoniker": "POCClientePrestamo\\GUIBuscarPrestamo.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\GUIBuscarPrestamo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "POCClientePrestamo\\GUIBuscarPrestamo.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T22:38:01.234Z"
             }
           ]
         }

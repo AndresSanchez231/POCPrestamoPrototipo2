@@ -243,11 +243,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\POCClientePrestamo.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\POCClientePrestamo.csproj",
       "projectName": "POCClientePrestamo",
-      "projectPath": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\POCClientePrestamo.csproj",
+      "projectPath": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\POCClientePrestamo.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\Escritorio\\POCClientePrestamo\\POCClientePrestamo\\obj\\",
+      "outputPath": "C:\\Users\\User\\OneDrive\\Escritorio\\POCPrestamoPrototipo2\\POCClientePrestamo\\POCClientePrestamo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,68 +1,48 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GraphQL;
-using GraphQL.Client.Http;
-using GraphQL.Client.Serializer.SystemTextJson;
-using POCClientePrestamo.model;
+using POCClientePrestamo.services;
 
 namespace POCClientePrestamo
 {
     public partial class GUIListarPrestamos : Form
     {
+        private readonly PrestamoService _prestamoService = new PrestamoService();
+
         public GUIListarPrestamos()
         {
             InitializeComponent();
+            // Suscribirse al Observer
+            GestorEventos.PrestamoCambiado += CargarDatos;
         }
 
-        private async void GUIListarPrestamos_Load(object sender, EventArgs e)
+        private void GUIListarPrestamos_Load(object sender, EventArgs e)
         {
-            await listarPrestamos();
+            CargarDatos();
         }
 
-        private async void btnListar_Click(object sender, EventArgs e)
+        // ESTE ES EL MÉTODO QUE FALTABA
+        private void btnListar_Click(object sender, EventArgs e)
         {
-            await listarPrestamos();
+            CargarDatos();
         }
 
-        private async Task listarPrestamos()
+        private async void CargarDatos()
         {
+            if (this.IsDisposed) return;
+
             try
             {
-                var client = new GraphQLHttpClient(
-                    "http://localhost:8080/graphql",
-                    new SystemTextJsonSerializer());
-
-                var request = new GraphQLRequest
-                {
-                    Query = @"
-                        query {
-                            prestamos {
-                                idPrestamo
-                                monto
-                                tasaIntereses
-                                fechaRegistro
-                                tipo
-                                estado
-                            }
-                        }
-                    "
-                };
-
-                var response = await client.SendQueryAsync<ResponseListaPrestamos>(request);
-
-                if (response.Errors != null && response.Errors.Length > 0)
-                {
-                    MessageBox.Show("Error: " + response.Errors[0].Message);
-                    return;
-                }
-
+                var prestamos = await _prestamoService.ListarPrestamosAsync();
                 dgvPrestamos.DataSource = null;
 
-                var listaParaMostrar = new System.Collections.Generic.List<object>();
-                foreach (var p in response.Data.prestamos)
+                if (prestamos == null) return;
+
+                var lista = new List<object>();
+                foreach (var p in prestamos)
                 {
-                    listaParaMostrar.Add(new
+                    lista.Add(new
                     {
                         ID = p.idPrestamo,
                         Monto = p.monto,
@@ -72,13 +52,18 @@ namespace POCClientePrestamo
                         Estado = p.estado ? "ACTIVO" : "INACTIVO"
                     });
                 }
-
-                dgvPrestamos.DataSource = listaParaMostrar;
+                dgvPrestamos.DataSource = lista;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void GUIListarPrestamos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Desuscribirse del Observer
+            GestorEventos.PrestamoCambiado -= CargarDatos;
         }
     }
 }

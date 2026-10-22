@@ -36,6 +36,13 @@
             actualizarPrestamoToolStripMenuItem = new ToolStripMenuItem();
             listarPrestamosToolStripMenuItem = new ToolStripMenuItem();
             listarPorFiltroToolStripMenuItem = new ToolStripMenuItem();
+            clientesToolStripMenuItem = new ToolStripMenuItem();
+            agregarClienteToolStripMenuItem = new ToolStripMenuItem();
+            listarClientesToolStripMenuItem = new ToolStripMenuItem();
+            buscarClienteToolStripMenuItem = new ToolStripMenuItem();
+            actualizarClienteToolStripMenuItem = new ToolStripMenuItem();
+            eliminarClienteToolStripMenuItem = new ToolStripMenuItem();
+            listarTodosClientesToolStripMenuItem = new ToolStripMenuItem();
             ayudaToolStripMenuItem = new ToolStripMenuItem();
             acercaDeToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
@@ -44,7 +51,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { operacionesToolStripMenuItem, ayudaToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { operacionesToolStripMenuItem, clientesToolStripMenuItem, ayudaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -100,6 +107,55 @@
             listarPorFiltroToolStripMenuItem.Text = "Listar por Filtro";
             listarPorFiltroToolStripMenuItem.Click += listarPorFiltroToolStripMenuItem_Click;
             // 
+            // clientesToolStripMenuItem
+            // 
+            clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { agregarClienteToolStripMenuItem, listarClientesToolStripMenuItem, buscarClienteToolStripMenuItem, actualizarClienteToolStripMenuItem, eliminarClienteToolStripMenuItem, listarTodosClientesToolStripMenuItem });
+            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            clientesToolStripMenuItem.Size = new Size(75, 24);
+            clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // agregarClienteToolStripMenuItem
+            // 
+            agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
+            agregarClienteToolStripMenuItem.Size = new Size(245, 26);
+            agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
+            agregarClienteToolStripMenuItem.Click += agregarClienteToolStripMenuItem_Click_1;
+            // 
+            // listarClientesToolStripMenuItem
+            // 
+            listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
+            listarClientesToolStripMenuItem.Size = new Size(245, 26);
+            listarClientesToolStripMenuItem.Text = "Listar Clientes (Por Préstamo)";
+            listarClientesToolStripMenuItem.Click += listarClientesToolStripMenuItem_Click_1;
+            // 
+            // buscarClienteToolStripMenuItem
+            // 
+            buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
+            buscarClienteToolStripMenuItem.Size = new Size(245, 26);
+            buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
+            buscarClienteToolStripMenuItem.Click += buscarClienteToolStripMenuItem_Click;
+            // 
+            // actualizarClienteToolStripMenuItem
+            // 
+            actualizarClienteToolStripMenuItem.Name = "actualizarClienteToolStripMenuItem";
+            actualizarClienteToolStripMenuItem.Size = new Size(245, 26);
+            actualizarClienteToolStripMenuItem.Text = "Actualizar Cliente";
+            actualizarClienteToolStripMenuItem.Click += actualizarClienteToolStripMenuItem_Click;
+            // 
+            // eliminarClienteToolStripMenuItem
+            // 
+            eliminarClienteToolStripMenuItem.Name = "eliminarClienteToolStripMenuItem";
+            eliminarClienteToolStripMenuItem.Size = new Size(245, 26);
+            eliminarClienteToolStripMenuItem.Text = "Eliminar Cliente";
+            eliminarClienteToolStripMenuItem.Click += eliminarClienteToolStripMenuItem_Click;
+            // 
+            // listarTodosClientesToolStripMenuItem
+            // 
+            listarTodosClientesToolStripMenuItem.Name = "listarTodosClientesToolStripMenuItem";
+            listarTodosClientesToolStripMenuItem.Size = new Size(245, 26);
+            listarTodosClientesToolStripMenuItem.Text = "Listar Todos los Clientes";
+            listarTodosClientesToolStripMenuItem.Click += listarTodosClientesToolStripMenuItem_Click;
+            // 
             // ayudaToolStripMenuItem
             // 
             ayudaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { acercaDeToolStripMenuItem });
@@ -110,7 +166,7 @@
             // acercaDeToolStripMenuItem
             // 
             acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            acercaDeToolStripMenuItem.Size = new Size(224, 26);
+            acercaDeToolStripMenuItem.Size = new Size(167, 26);
             acercaDeToolStripMenuItem.Text = "Acerca de...";
             acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
             // 
@@ -141,6 +197,13 @@
         private ToolStripMenuItem actualizarPrestamoToolStripMenuItem;
         private ToolStripMenuItem listarPrestamosToolStripMenuItem;
         private ToolStripMenuItem listarPorFiltroToolStripMenuItem;
+        private ToolStripMenuItem clientesToolStripMenuItem;
+        private ToolStripMenuItem agregarClienteToolStripMenuItem;
+        private ToolStripMenuItem listarClientesToolStripMenuItem;
+        private ToolStripMenuItem buscarClienteToolStripMenuItem;
+        private ToolStripMenuItem actualizarClienteToolStripMenuItem;
+        private ToolStripMenuItem eliminarClienteToolStripMenuItem;
+        private ToolStripMenuItem listarTodosClientesToolStripMenuItem;
         private ToolStripMenuItem ayudaToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
     }
