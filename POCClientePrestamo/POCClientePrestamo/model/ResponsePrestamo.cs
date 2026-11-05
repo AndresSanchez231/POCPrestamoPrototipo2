@@ -59,7 +59,6 @@ namespace POCClientePrestamo.model
         public List<ClienteData> clientes { get; set; }
     }
 
-    // NUEVA CLASE PARA LISTAR TODOS
     public class ResponseListaTodosClientes
     {
         [JsonPropertyName("clientes")]
@@ -72,6 +71,39 @@ namespace POCClientePrestamo.model
         public bool EliminarCliente { get; set; }
     }
 
+    // --- NUEVAS CLASES PARA LA CONSULTA PERSONALIZADA ---
+    public class ResponseClientesConPrestamo
+    {
+        [JsonPropertyName("clientesConDatosPrestamo")]
+        public List<ClienteConPrestamoData> clientesConDatosPrestamo { get; set; }
+    }
+
+    public class ClienteConPrestamoData
+    {
+        [JsonPropertyName("idCliente")]
+        public int idCliente { get; set; }
+
+        [JsonPropertyName("nombreCompleto")]
+        public string nombreCompleto { get; set; }
+
+        [JsonPropertyName("cedula")]
+        public string cedula { get; set; }
+
+        [JsonPropertyName("ingresosMensuales")]
+        public double ingresosMensuales { get; set; }
+
+        [JsonPropertyName("fechaNacimiento")]
+        public string fechaNacimiento { get; set; }
+
+        [JsonPropertyName("estado")]
+        public bool estado { get; set; }
+
+        [JsonPropertyName("montoPrestamo")]
+        public double montoPrestamo { get; set; }
+
+        [JsonPropertyName("tipoPrestamo")]
+        public string tipoPrestamo { get; set; }
+    }
 
     // ==========================================
     // MODELOS DE DATOS (OBJETOS)

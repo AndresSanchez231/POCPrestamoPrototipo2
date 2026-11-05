@@ -45,7 +45,7 @@ namespace POCClientePrestamo.services
             return response.Data?.clientes;
         }
 
-        // 2. LISTAR TODOS LOS CLIENTES (NUEVO)
+        // 2. LISTAR TODOS LOS CLIENTES
         public async Task<List<ClienteData>?> ListarTodosClientesAsync()
         {
             var request = new GraphQLRequest
@@ -164,6 +164,51 @@ namespace POCClientePrestamo.services
             var response = await _client.SendMutationAsync<DeleteClienteResponse>(request);
             if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
             return response.Data.EliminarCliente;
+        }
+
+        // 7. CONSULTA PERSONALIZADA: Clientes con datos del Préstamo
+        public async Task<List<object>?> ListarClientesConDatosPrestamoAsync()
+        {
+            var request = new GraphQLRequest
+            {
+                Query = @"
+                    query {
+                        clientesConDatosPrestamo {
+                            idCliente
+                            nombreCompleto
+                            cedula
+                            ingresosMensuales
+                            fechaNacimiento
+                            estado
+                            montoPrestamo
+                            tipoPrestamo
+                        }
+                    }
+                "
+            };
+
+            var response = await _client.SendQueryAsync<ResponseClientesConPrestamo>(request);
+            if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
+
+            var lista = new List<object>();
+            if (response.Data?.clientesConDatosPrestamo != null)
+            {
+                foreach (var c in response.Data.clientesConDatosPrestamo)
+                {
+                    lista.Add(new
+                    {
+                        ID = c.idCliente,
+                        Nombre = c.nombreCompleto,
+                        Cedula = c.cedula,
+                        Ingresos = c.ingresosMensuales,
+                        FechaNac = c.fechaNacimiento,
+                        Estado = c.estado ? "ACTIVO" : "INACTIVO",
+                        MontoPrestamo = c.montoPrestamo,
+                        TipoPrestamo = c.tipoPrestamo
+                    });
+                }
+            }
+            return lista;
         }
     }
 }

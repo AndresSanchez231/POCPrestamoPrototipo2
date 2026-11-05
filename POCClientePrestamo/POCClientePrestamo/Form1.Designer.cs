@@ -43,6 +43,7 @@
             actualizarClienteToolStripMenuItem = new ToolStripMenuItem();
             eliminarClienteToolStripMenuItem = new ToolStripMenuItem();
             listarTodosClientesToolStripMenuItem = new ToolStripMenuItem();
+            listarClientesConPrestamoToolStripMenuItem = new ToolStripMenuItem();
             ayudaToolStripMenuItem = new ToolStripMenuItem();
             acercaDeToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
@@ -62,8 +63,8 @@
             // 
             operacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { insertarPrestamoToolStripMenuItem, consultarPrestamoToolStripMenuItem, eliminarPrestamoToolStripMenuItem, actualizarPrestamoToolStripMenuItem, listarPrestamosToolStripMenuItem, listarPorFiltroToolStripMenuItem });
             operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
-            operacionesToolStripMenuItem.Size = new Size(106, 24);
-            operacionesToolStripMenuItem.Text = "Operaciones";
+            operacionesToolStripMenuItem.Size = new Size(91, 24);
+            operacionesToolStripMenuItem.Text = "Prestamos";
             // 
             // insertarPrestamoToolStripMenuItem
             // 
@@ -109,7 +110,7 @@
             // 
             // clientesToolStripMenuItem
             // 
-            clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { agregarClienteToolStripMenuItem, listarClientesToolStripMenuItem, buscarClienteToolStripMenuItem, actualizarClienteToolStripMenuItem, eliminarClienteToolStripMenuItem, listarTodosClientesToolStripMenuItem });
+            clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { agregarClienteToolStripMenuItem, listarClientesToolStripMenuItem, buscarClienteToolStripMenuItem, actualizarClienteToolStripMenuItem, eliminarClienteToolStripMenuItem, listarTodosClientesToolStripMenuItem, listarClientesConPrestamoToolStripMenuItem });
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             clientesToolStripMenuItem.Size = new Size(75, 24);
             clientesToolStripMenuItem.Text = "Clientes";
@@ -117,44 +118,51 @@
             // agregarClienteToolStripMenuItem
             // 
             agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            agregarClienteToolStripMenuItem.Size = new Size(245, 26);
+            agregarClienteToolStripMenuItem.Size = new Size(302, 26);
             agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             agregarClienteToolStripMenuItem.Click += agregarClienteToolStripMenuItem_Click_1;
             // 
             // listarClientesToolStripMenuItem
             // 
             listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
-            listarClientesToolStripMenuItem.Size = new Size(245, 26);
+            listarClientesToolStripMenuItem.Size = new Size(302, 26);
             listarClientesToolStripMenuItem.Text = "Listar Clientes (Por Préstamo)";
             listarClientesToolStripMenuItem.Click += listarClientesToolStripMenuItem_Click_1;
             // 
             // buscarClienteToolStripMenuItem
             // 
             buscarClienteToolStripMenuItem.Name = "buscarClienteToolStripMenuItem";
-            buscarClienteToolStripMenuItem.Size = new Size(245, 26);
+            buscarClienteToolStripMenuItem.Size = new Size(302, 26);
             buscarClienteToolStripMenuItem.Text = "Buscar Cliente";
             buscarClienteToolStripMenuItem.Click += buscarClienteToolStripMenuItem_Click;
             // 
             // actualizarClienteToolStripMenuItem
             // 
             actualizarClienteToolStripMenuItem.Name = "actualizarClienteToolStripMenuItem";
-            actualizarClienteToolStripMenuItem.Size = new Size(245, 26);
+            actualizarClienteToolStripMenuItem.Size = new Size(302, 26);
             actualizarClienteToolStripMenuItem.Text = "Actualizar Cliente";
             actualizarClienteToolStripMenuItem.Click += actualizarClienteToolStripMenuItem_Click;
             // 
             // eliminarClienteToolStripMenuItem
             // 
             eliminarClienteToolStripMenuItem.Name = "eliminarClienteToolStripMenuItem";
-            eliminarClienteToolStripMenuItem.Size = new Size(245, 26);
+            eliminarClienteToolStripMenuItem.Size = new Size(302, 26);
             eliminarClienteToolStripMenuItem.Text = "Eliminar Cliente";
             eliminarClienteToolStripMenuItem.Click += eliminarClienteToolStripMenuItem_Click;
             // 
             // listarTodosClientesToolStripMenuItem
             // 
             listarTodosClientesToolStripMenuItem.Name = "listarTodosClientesToolStripMenuItem";
-            listarTodosClientesToolStripMenuItem.Size = new Size(245, 26);
+            listarTodosClientesToolStripMenuItem.Size = new Size(302, 26);
             listarTodosClientesToolStripMenuItem.Text = "Listar Todos los Clientes";
             listarTodosClientesToolStripMenuItem.Click += listarTodosClientesToolStripMenuItem_Click;
+            // 
+            // listarClientesConPrestamoToolStripMenuItem
+            // 
+            listarClientesConPrestamoToolStripMenuItem.Name = "listarClientesConPrestamoToolStripMenuItem";
+            listarClientesConPrestamoToolStripMenuItem.Size = new Size(302, 26);
+            listarClientesConPrestamoToolStripMenuItem.Text = "Clientes con Datos de Préstamo";
+            listarClientesConPrestamoToolStripMenuItem.Click += listarClientesConPrestamoToolStripMenuItem_Click;
             // 
             // ayudaToolStripMenuItem
             // 
@@ -204,6 +212,7 @@
         private ToolStripMenuItem actualizarClienteToolStripMenuItem;
         private ToolStripMenuItem eliminarClienteToolStripMenuItem;
         private ToolStripMenuItem listarTodosClientesToolStripMenuItem;
+        private ToolStripMenuItem listarClientesConPrestamoToolStripMenuItem;
         private ToolStripMenuItem ayudaToolStripMenuItem;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
     }

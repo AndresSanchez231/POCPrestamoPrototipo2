@@ -65,3 +65,4 @@ C:\Users\User\OneDrive\Escritorio\POCPrestamoPrototipo2\POCClientePrestamo\POCCl
 C:\Users\User\OneDrive\Escritorio\POCPrestamoPrototipo2\POCClientePrestamo\POCClientePrestamo\obj\Debug\net10.0-windows\POCClientePrestamo.GUIBuscarCliente.resources
 C:\Users\User\OneDrive\Escritorio\POCPrestamoPrototipo2\POCClientePrestamo\POCClientePrestamo\obj\Debug\net10.0-windows\POCClientePrestamo.GUIEliminarCliente.resources
 C:\Users\User\OneDrive\Escritorio\POCPrestamoPrototipo2\POCClientePrestamo\POCClientePrestamo\obj\Debug\net10.0-windows\POCClientePrestamo.GUIListarTodosClientes.resources
+C:\Users\User\OneDrive\Escritorio\POCPrestamoPrototipo2\POCClientePrestamo\POCClientePrestamo\obj\Debug\net10.0-windows\POCClientePrestamo.GUIListarClientesConPrestamo.resources

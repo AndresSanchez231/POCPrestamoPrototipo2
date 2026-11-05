@@ -78,6 +78,11 @@ namespace POCClientePrestamo
             new GUIListarTodosClientes().Show();
         }
 
+        private void listarClientesConPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GUIListarClientesConPrestamo().Show();
+        }
+
         // ==========================================
         // AYUDA
         // ==========================================

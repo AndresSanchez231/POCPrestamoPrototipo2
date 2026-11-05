@@ -1,14 +1,12 @@
 package org.example.controller;
 
-import org.example.model.Cliente;
 import org.example.model.Prestamo;
 import org.example.model.PrestamoInput;
-import org.example.servicios.ServicioCliente;
 import org.example.servicios.ServicioPrestamo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
-import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
 import java.util.List;
@@ -17,39 +15,36 @@ import java.util.Optional;
 @Controller
 public class PrestamoController {
 
+    @Autowired
+    private ServicioPrestamo servicioPrestamo;
+
     @QueryMapping
     public List<Prestamo> prestamos() {
-        return ServicioPrestamo.listarPrestamos();
+        return servicioPrestamo.listarPrestamos();
     }
 
     @QueryMapping
     public Optional<Prestamo> prestamoPorId(@Argument int idPrestamo) {
-        return ServicioPrestamo.buscarPorId(idPrestamo);
+        return servicioPrestamo.buscarPorId(idPrestamo);
     }
 
-    // --- NUEVO MÉTODO PARA EL FILTRO ---
     @QueryMapping
     public List<Prestamo> prestamosPorTipoInmueble(@Argument String tipoInmueble) {
-        return ServicioPrestamo.listarPorTipoInmueble(tipoInmueble);
+        return servicioPrestamo.listarPorTipoInmueble(tipoInmueble);
     }
 
     @MutationMapping
     public Prestamo addPrestamo(@Argument("input") PrestamoInput input) {
-        return ServicioPrestamo.addPrestamo(input);
+        return servicioPrestamo.addPrestamo(input);
     }
 
     @MutationMapping
     public Optional<Prestamo> actualizarPrestamo(@Argument int idPrestamo, @Argument("input") PrestamoInput input) {
-        return ServicioPrestamo.actualizarPrestamo(idPrestamo, input);
+        return servicioPrestamo.actualizarPrestamo(idPrestamo, input);
     }
 
     @MutationMapping
     public boolean eliminarPrestamo(@Argument int idPrestamo) {
-        return ServicioPrestamo.eliminarPrestamo(idPrestamo);
-    }
-
-    @SchemaMapping(typeName = "Prestamo", field = "clientes")
-    public List<Cliente> getClientes(Prestamo prestamo) {
-        return ServicioCliente.listarClientesPorPrestamo(prestamo.getIdPrestamo());
+        return servicioPrestamo.eliminarPrestamo(idPrestamo);
     }
 }

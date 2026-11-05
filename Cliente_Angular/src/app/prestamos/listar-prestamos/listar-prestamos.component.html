@@ -1,0 +1,26 @@
+<div style="padding: 20px;">
+  <h2>Listar Préstamos (Todos)</h2>
+  
+  <!-- BOTÓN DE REFRESCAR -->
+  <button (click)="cargarPrestamos()" style="margin-bottom: 15px; padding: 10px 20px; background-color: #3f51b5; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Refrescar Datos
+  </button>
+
+  <table border="1" style="width: 100%; text-align: left;">
+    <thead>
+      <tr style="background-color: #3f51b5; color: white;">
+        <th>ID</th><th>Monto</th><th>Tasa</th><th>Fecha</th><th>Tipo</th><th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of prestamos">
+        <td>{{p.idPrestamo}}</td>
+        <td>{{p.monto | number:'1.2-2'}}</td>
+        <td>{{p.tasaIntereses | number:'1.2-2'}}</td>
+        <td>{{p.fechaRegistro}}</td>
+        <td>{{p.tipo}}</td>
+        <td>{{p.estado ? 'ACTIVO' : 'INACTIVO'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

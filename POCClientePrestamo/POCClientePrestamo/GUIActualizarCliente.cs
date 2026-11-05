@@ -45,6 +45,12 @@ namespace POCClientePrestamo
                 estadoActual = c.estado;
 
                 HabilitarCampos(true);
+
+                if (!c.estado)
+                {
+                    MessageBox.Show("Este cliente está INACTIVO. No se puede actualizar.");
+                    btnActualizar.Enabled = false; // Deshabilitamos el botón
+                }
             }
             catch (Exception ex)
             {
@@ -72,14 +78,23 @@ namespace POCClientePrestamo
                 if (resultado == null)
                     MessageBox.Show("No se pudo actualizar.");
                 else
-                {
                     MessageBox.Show("Cliente actualizado correctamente.");
-                    GestorEventos.NotificarCliente();
-                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                // CAPTURAMOS EL MENSAJE REAL DE JAVA
+                if (ex.Message.Contains("INACTIVO"))
+                {
+                    MessageBox.Show("El cliente está INACTIVO. No se puede actualizar.");
+                }
+                else if (ex.Message.Contains("INTERNAL_ERROR"))
+                {
+                    MessageBox.Show("No se pudo actualizar. Verifique que el cliente esté activo.");
+                }
+                else
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         }
 

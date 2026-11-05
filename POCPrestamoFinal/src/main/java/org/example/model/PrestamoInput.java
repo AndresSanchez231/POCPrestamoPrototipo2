@@ -10,5 +10,5 @@ public record PrestamoInput(
         LocalDateTime fechaRegistro,
         String tipo,
         boolean estado,
-        List<ClienteInput> clientes // Lista de clientes
+        List<ClienteInput> clientes
 ) {}

@@ -1,0 +1,34 @@
+<div style="padding: 20px; max-width: 500px;">
+  <h2>Actualizar Cliente (Búsqueda Previa)</h2>
+  
+  <div style="margin-bottom: 20px;">
+    <input type="number" [(ngModel)]="id" placeholder="ID Cliente" style="padding: 5px;">
+    <button (click)="buscar()" style="padding: 5px 15px; margin-left: 10px;">Buscar</button>
+  </div>
+
+  <div *ngIf="error" style="color:red; margin-bottom: 10px;">{{ error }}</div>
+  <div *ngIf="mensaje" style="color:green; margin-bottom: 10px;">{{ mensaje }}</div>
+  
+  <div *ngIf="cliente" style="display: grid; gap: 10px;">
+    <label><strong>ID:</strong> {{ cliente.idCliente }}</label>
+    
+    <label>Nombre:</label>
+    <input type="text" [(ngModel)]="cliente.nombreCompleto" style="padding: 5px;">
+    
+    <label>Cédula:</label>
+    <input type="text" [(ngModel)]="cliente.cedula" style="padding: 5px;">
+    
+    <label>Ingresos:</label>
+    <input type="number" step="0.01" [(ngModel)]="cliente.ingresosMensuales" style="padding: 5px;">
+    
+    <label>Fecha Nacimiento:</label>
+    <input type="datetime-local" [(ngModel)]="cliente.fechaNacimiento" style="padding: 5px;">
+    
+    <label>ID Préstamo:</label>
+    <input type="number" [(ngModel)]="cliente.idPrestamo" style="padding: 5px;">
+    
+    <button (click)="actualizar()" style="background-color: #ff9800; color: white; padding: 10px; margin-top: 10px; cursor: pointer;">
+      Actualizar Cliente
+    </button>
+  </div>
+</div>

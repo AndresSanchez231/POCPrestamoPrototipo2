@@ -1,0 +1,35 @@
+<div style="padding: 20px; max-width: 500px;">
+  <h2>Actualizar Préstamo (Búsqueda Previa)</h2>
+  
+  <div style="margin-bottom: 20px;">
+    <input type="number" [(ngModel)]="id" placeholder="ID Préstamo" style="padding: 5px;">
+    <button (click)="buscar()" style="padding: 5px 15px; margin-left: 10px;">Buscar</button>
+  </div>
+
+  <div *ngIf="error" style="color:red; margin-bottom: 10px;">{{ error }}</div>
+  <div *ngIf="mensaje" style="color:green; margin-bottom: 10px;">{{ mensaje }}</div>
+  
+  <div *ngIf="prestamo" style="display: grid; gap: 10px;">
+    <label><strong>ID:</strong> {{ prestamo.idPrestamo }}</label>
+    
+    <label>Monto:</label>
+    <input type="number" step="0.01" [(ngModel)]="prestamo.monto" style="padding: 5px;">
+    
+    <label>Tasa:</label>
+    <input type="number" step="0.01" [(ngModel)]="prestamo.tasaIntereses" style="padding: 5px;">
+    
+    <label>Fecha:</label>
+    <input type="datetime-local" [(ngModel)]="prestamo.fechaRegistro" style="padding: 5px;">
+    
+    <label>Tipo:</label>
+    <select [(ngModel)]="prestamo.tipo" style="padding: 5px;">
+      <option value="Casa">Casa</option>
+      <option value="Apartamento">Apartamento</option>
+      <option value="Local Comercial">Local Comercial</option>
+    </select>
+    
+    <button (click)="actualizar()" style="background-color: #ff9800; color: white; padding: 10px; margin-top: 10px; cursor: pointer;">
+      Actualizar Préstamo
+    </button>
+  </div>
+</div>

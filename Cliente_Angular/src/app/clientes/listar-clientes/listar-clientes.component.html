@@ -1,0 +1,21 @@
+<div style="padding: 20px;">
+  <h2>Listar Todos los Clientes</h2>
+  <table border="1" style="width: 100%;">
+    <thead>
+      <tr style="background-color: #3f51b5; color: white;">
+        <th>ID</th><th>Nombre</th><th>Cédula</th><th>Ingresos</th><th>Fecha Nac</th><th>ID Préstamo</th><th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of clientes">
+        <td>{{c.idCliente}}</td>
+        <td>{{c.nombreCompleto}}</td>
+        <td>{{c.cedula}}</td>
+        <td>{{c.ingresosMensuales | number:'1.2-2'}}</td>
+        <td>{{c.fechaNacimiento}}</td>
+        <td>{{c.idPrestamo}}</td>
+        <td>{{c.estado ? 'ACTIVO' : 'INACTIVO'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

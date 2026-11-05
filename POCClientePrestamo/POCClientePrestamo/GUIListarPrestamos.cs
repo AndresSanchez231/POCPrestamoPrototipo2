@@ -13,8 +13,9 @@ namespace POCClientePrestamo
         public GUIListarPrestamos()
         {
             InitializeComponent();
-            // Suscribirse al Observer
-            GestorEventos.PrestamoCambiado += CargarDatos;
+            dgvPrestamos.AutoGenerateColumns = true;
+            // Suscribirse al evento para formatear las celdas
+            dgvPrestamos.CellFormatting += dgvPrestamos_CellFormatting;
         }
 
         private void GUIListarPrestamos_Load(object sender, EventArgs e)
@@ -22,7 +23,6 @@ namespace POCClientePrestamo
             CargarDatos();
         }
 
-        // ESTE ES EL MÉTODO QUE FALTABA
         private void btnListar_Click(object sender, EventArgs e)
         {
             CargarDatos();
@@ -31,12 +31,10 @@ namespace POCClientePrestamo
         private async void CargarDatos()
         {
             if (this.IsDisposed) return;
-
             try
             {
                 var prestamos = await _prestamoService.ListarPrestamosAsync();
                 dgvPrestamos.DataSource = null;
-
                 if (prestamos == null) return;
 
                 var lista = new List<object>();
@@ -60,10 +58,27 @@ namespace POCClientePrestamo
             }
         }
 
+        // EVENTO PARA FORMATEAR LAS CELDAS
+        private void dgvPrestamos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verificamos si la columna es "Monto" o "Tasa"
+            if (dgvPrestamos.Columns[e.ColumnIndex].Name == "Monto" ||
+                dgvPrestamos.Columns[e.ColumnIndex].Name == "Tasa")
+            {
+                if (e.Value != null)
+                {
+                    // Convertimos a double y formateamos con 2 decimales
+                    double valor = Convert.ToDouble(e.Value);
+                    e.Value = valor.ToString("N2");
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        // Desuscribirse al cerrar para evitar errores
         private void GUIListarPrestamos_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // Desuscribirse del Observer
-            GestorEventos.PrestamoCambiado -= CargarDatos;
+            dgvPrestamos.CellFormatting -= dgvPrestamos_CellFormatting;
         }
     }
 }

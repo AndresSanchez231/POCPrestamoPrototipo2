@@ -1,0 +1,29 @@
+<div style="padding: 20px;">
+  <h2>Filtrar Préstamos por Tipo</h2>
+  <label>Tipo Inmueble:</label>
+  <select [(ngModel)]="tipo">
+    <option value="Casa">Casa</option>
+    <option value="Apartamento">Apartamento</option>
+    <option value="Local Comercial">Local Comercial</option>
+  </select>
+  <button (click)="filtrar()">Filtrar</button>
+  <div *ngIf="error" style="color:red;">{{ error }}</div>
+  
+  <table border="1" style="width: 100%; text-align: left; margin-top: 10px;">
+    <thead>
+      <tr style="background-color: #3f51b5; color: white;">
+        <th>ID</th><th>Monto</th><th>Tasa</th><th>Fecha</th><th>Tipo</th><th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of prestamos">
+        <td>{{p.idPrestamo}}</td>
+        <td>{{p.monto | number:'1.2-2'}}</td>
+        <td>{{p.tasaIntereses | number:'1.2-2'}}</td>
+        <td>{{p.fechaRegistro}}</td>
+        <td>{{p.tipo}}</td>
+        <td>{{p.estado ? 'ACTIVO' : 'INACTIVO'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+<div style="padding: 20px; max-width: 500px;">
+  <h2>Buscar Cliente</h2>
+  <input type="number" [(ngModel)]="id" placeholder="ID Cliente">
+  <button (click)="buscar()">Buscar</button>
+  <div *ngIf="error" style="color:red;">{{ error }}</div>
+  
+  <div *ngIf="cliente" style="margin-top: 20px;">
+    <p><strong>ID:</strong> {{cliente.idCliente}}</p>
+    <p><strong>Nombre:</strong> {{cliente.nombreCompleto}}</p>
+    <p><strong>Cédula:</strong> {{cliente.cedula}}</p>
+    <p><strong>Ingresos:</strong> {{cliente.ingresosMensuales | number:'1.2-2'}}</p>
+    <p><strong>Fecha Nac:</strong> {{cliente.fechaNacimiento}}</p>
+    <p><strong>ID Préstamo:</strong> {{cliente.idPrestamo}}</p>
+    <p><strong>Estado:</strong> {{cliente.estado ? 'ACTIVO' : 'INACTIVO'}}</p>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div style="padding: 20px; max-width: 500px; margin: auto;">
+  <h2>Insertar Préstamo</h2>
+  <div *ngIf="error" style="color:red; margin-bottom: 10px;">{{ error }}</div>
+  <div *ngIf="mensaje" style="color:green; margin-bottom: 10px;">{{ mensaje }}</div>
+  
+  <label>ID:</label>
+  <input type="number" [(ngModel)]="idPrestamo" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Monto:</label>
+  <!-- Cambiado a text para permitir escribir letras y validar -->
+  <input type="text" [(ngModel)]="monto" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Tasa Intereses:</label>
+  <input type="text" [(ngModel)]="tasaIntereses" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Fecha:</label>
+  <input type="datetime-local" [(ngModel)]="fechaRegistro" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Tipo:</label>
+  <select [(ngModel)]="tipo" style="width: 100%; margin-bottom: 20px;">
+    <option value="Casa">Casa</option>
+    <option value="Apartamento">Apartamento</option>
+    <option value="Local Comercial">Local Comercial</option>
+  </select>
+  
+  <button (click)="guardar()" style="padding: 10px 20px;">Guardar</button>
+</div>

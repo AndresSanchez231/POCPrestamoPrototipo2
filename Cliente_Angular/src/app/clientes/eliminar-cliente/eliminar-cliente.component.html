@@ -1,0 +1,27 @@
+<div style="padding: 20px; max-width: 500px;">
+  <h2>Eliminar Cliente (Búsqueda Previa)</h2>
+  
+  <div style="margin-bottom: 20px;">
+    <input type="number" [(ngModel)]="id" placeholder="ID Cliente" style="padding: 5px;">
+    <button (click)="buscar()" style="padding: 5px 15px; margin-left: 10px;">Buscar</button>
+  </div>
+
+  <div *ngIf="error" style="color:red; margin-bottom: 10px;">{{ error }}</div>
+  <div *ngIf="mensaje" style="color:green; margin-bottom: 10px;">{{ mensaje }}</div>
+  
+  <div *ngIf="cliente" style="margin-top: 20px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+    <p><strong>ID Cliente:</strong> {{ cliente.idCliente }}</p>
+    <p><strong>Nombre Completo:</strong> {{ cliente.nombreCompleto }}</p>
+    <p><strong>Cédula:</strong> {{ cliente.cedula }}</p>
+    <p><strong>Ingresos Mensuales:</strong> {{ cliente.ingresosMensuales | number:'1.2-2' }}</p>
+    <p><strong>Fecha de Nacimiento:</strong> {{ cliente.fechaNacimiento }}</p>
+    <p><strong>ID del Préstamo:</strong> {{ cliente.idPrestamo }}</p>
+    <p><strong>Estado:</strong> {{ cliente.estado ? 'ACTIVO' : 'INACTIVO' }}</p>
+
+    <div style="margin-top: 15px;">
+      <button (click)="eliminar()" style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        Eliminar Cliente
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div style="padding: 20px; max-width: 500px; margin: auto;">
+  <h2>Insertar Cliente</h2>
+  <div *ngIf="error" style="color:red; margin-bottom: 10px;">{{ error }}</div>
+  <div *ngIf="mensaje" style="color:green; margin-bottom: 10px;">{{ mensaje }}</div>
+
+  <label>ID Cliente:</label>
+  <input type="number" [(ngModel)]="idCliente" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Nombre Completo:</label>
+  <input type="text" [(ngModel)]="nombreCompleto" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Cédula:</label>
+  <input type="text" [(ngModel)]="cedula" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Ingresos Mensuales:</label>
+  <!-- Cambiado a text para permitir escribir letras y validar -->
+  <input type="text" [(ngModel)]="ingresosMensuales" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>Fecha Nacimiento:</label>
+  <input type="datetime-local" [(ngModel)]="fechaNacimiento" style="width: 100%; margin-bottom: 10px;">
+  
+  <label>ID Préstamo Asociado:</label>
+  <input type="number" [(ngModel)]="idPrestamo" style="width: 100%; margin-bottom: 20px;">
+  
+  <button (click)="guardar()" style="padding: 10px 20px;">Guardar</button>
+</div>
