@@ -19,12 +19,13 @@ export class ActualizarPrestamoComponent {
 
   buscar() {
     if(!this.id) return;
+    
+    // Enviamos el número directamente
     this.prestamoService.buscarPrestamo(this.id).subscribe({
       next: (res: any) => {
         this.prestamo = res.data.prestamoPorId;
         this.error = this.prestamo ? '' : 'No encontrado.';
         
-        // Recortamos la fecha para el input (YYYY-MM-DDTHH:mm)
         if (this.prestamo && this.prestamo.fechaRegistro) {
           this.prestamo.fechaRegistro = this.prestamo.fechaRegistro.substring(0, 16);
         }
@@ -36,7 +37,6 @@ export class ActualizarPrestamoComponent {
   actualizar() {
     this.error = ''; this.mensaje = '';
     
-    // Objeto LIMPIO, sin _typename, con el ID de la búsqueda
     const input = {
       idPrestamo: Number(this.id), 
       monto: Number(this.prestamo.monto),
@@ -50,7 +50,18 @@ export class ActualizarPrestamoComponent {
       next: () => {
         this.mensaje = 'Actualizado correctamente.';
       },
-      error: (err) => this.error = err.message
+      error: (err) => {
+        // CAPTURAMOS EL MENSAJE REAL DE JAVA
+        const errorMsg = err.message || err.graphQLErrors?.[0]?.message || '';
+        
+        if (errorMsg.includes('INACTIVO')) {
+          this.error = 'El préstamo está INACTIVO. No se puede actualizar.';
+        } else if (errorMsg.includes('INTERNAL_ERROR')) {
+          this.error = 'No se pudo actualizar. Verifique que el préstamo esté activo.';
+        } else {
+          this.error = errorMsg;
+        }
+      }
     });
   }
 }

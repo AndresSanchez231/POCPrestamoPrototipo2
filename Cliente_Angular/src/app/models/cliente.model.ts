@@ -4,7 +4,7 @@ export interface Cliente {
   cedula: string;
   ingresosMensuales: number;
   fechaNacimiento: string;
-  idPrestamo: number;
+  idPrestamo: string; // <-- String (ObjectId)
   estado: boolean;
 }
 
@@ -14,7 +14,7 @@ export interface ClienteInput {
   cedula: string;
   ingresosMensuales: number;
   fechaNacimiento: string;
-  idPrestamo: number;
+  idPrestamo: string; // <-- String (ObjectId)
   estado: boolean;
 }
 

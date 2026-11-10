@@ -27,21 +27,23 @@ public class ServicioPrestamo {
     }
 
     public Optional<Prestamo> buscarPorId(int idPrestamo) {
-        return prestamoRepository.findById(idPrestamo);
+        Query query = new Query(Criteria.where("idPrestamo").is(idPrestamo));
+        Prestamo p = mongoTemplate.findOne(query, Prestamo.class);
+        return Optional.ofNullable(p);
     }
 
     public List<Prestamo> listarPorTipoInmueble(String tipo) {
-        return prestamoRepository.findByTipo(tipo).stream()
-                .filter(Prestamo::isEstado)
-                .toList();
+        Query query = new Query(Criteria.where("tipo").is(tipo).and("estado").is(true));
+        return mongoTemplate.find(query, Prestamo.class);
     }
 
     public Prestamo addPrestamo(PrestamoInput input) {
-        if (prestamoRepository.existsById(input.idPrestamo())) {
+        if (mongoTemplate.exists(new Query(Criteria.where("idPrestamo").is(input.idPrestamo())), Prestamo.class)) {
             throw new RuntimeException("El ID " + input.idPrestamo() + " ya existe.");
         }
 
         Prestamo nuevo = new Prestamo(
+                null,
                 input.idPrestamo(),
                 Double.parseDouble(String.valueOf(input.monto())) + 0.0,
                 Double.parseDouble(String.valueOf(input.tasaIntereses())) + 0.0,
@@ -54,18 +56,15 @@ public class ServicioPrestamo {
         return prestamoRepository.save(nuevo);
     }
 
-    // ACTUALIZACIÓN DIRECTA EN MONGO (A PRUEBA DE FALLOS)
     public Optional<Prestamo> actualizarPrestamo(int idPrestamo, PrestamoInput input) {
-        Optional<Prestamo> existente = prestamoRepository.findById(idPrestamo);
+        Optional<Prestamo> existente = buscarPorId(idPrestamo);
         if (existente.isEmpty()) return Optional.empty();
 
         if (!existente.get().isEstado()) {
             throw new RuntimeException("El préstamo con ID " + idPrestamo + " está INACTIVO y no se puede actualizar.");
         }
 
-        // Buscamos por _id y actualizamos los campos
-        Query query = new Query(Criteria.where("_id").is(idPrestamo));
-
+        Query query = new Query(Criteria.where("idPrestamo").is(idPrestamo));
         Update update = new Update()
                 .set("monto", Double.parseDouble(String.valueOf(input.monto())) + 0.0)
                 .set("tasaIntereses", Double.parseDouble(String.valueOf(input.tasaIntereses())) + 0.0)
@@ -79,7 +78,7 @@ public class ServicioPrestamo {
     }
 
     public boolean eliminarPrestamo(int idPrestamo) {
-        Optional<Prestamo> existente = prestamoRepository.findById(idPrestamo);
+        Optional<Prestamo> existente = buscarPorId(idPrestamo);
         if (existente.isEmpty()) return false;
 
         Prestamo p = existente.get();

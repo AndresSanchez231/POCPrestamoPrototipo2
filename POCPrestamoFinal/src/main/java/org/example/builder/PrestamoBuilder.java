@@ -52,6 +52,7 @@ public class PrestamoBuilder {
     }
 
     public Prestamo build() {
-        return new Prestamo(idPrestamo, monto, tasaIntereses, fechaRegistro, tipo, estado, clientes);
+        // El primer parámetro es el _id (null para que Mongo lo genere)
+        return new Prestamo(null, idPrestamo, monto, tasaIntereses, fechaRegistro, tipo, estado, clientes);
     }
 }

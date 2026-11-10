@@ -1,12 +1,11 @@
 <div style="padding: 20px; max-width: 500px;">
   <h2>Buscar Préstamo</h2>
-  <input type="number" [(ngModel)]="id" placeholder="ID Préstamo">
-  <button (click)="buscar()">Buscar</button>
-  <div *ngIf="error" style="color:red;">{{ error }}</div>
+  <input type="number" [(ngModel)]="id" placeholder="ID Préstamo (Ej: 1)" style="padding: 5px;">
+  <button (click)="buscar()" style="padding: 5px 15px; margin-left: 10px;">Buscar</button>
+  <div *ngIf="error" style="color:red; margin-top: 10px;">{{ error }}</div>
   
   <div *ngIf="prestamo" style="margin-top: 20px;">
     <p><strong>ID:</strong> {{prestamo.idPrestamo}}</p>
-    <!-- Aplicamos el pipe number para forzar 2 decimales -->
     <p><strong>Monto:</strong> {{prestamo.monto | number:'1.2-2'}}</p>
     <p><strong>Tasa:</strong> {{prestamo.tasaIntereses | number:'1.2-2'}}</p>
     <p><strong>Fecha:</strong> {{prestamo.fechaRegistro}}</p>

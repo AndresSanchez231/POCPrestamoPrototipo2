@@ -18,6 +18,7 @@ export class BuscarPrestamoComponent {
 
   buscar() {
     if(!this.id) return;
+    // Enviamos el número directamente
     this.prestamoService.buscarPrestamo(this.id).subscribe({
       next: (res: any) => {
         this.prestamo = res.data.prestamoPorId;

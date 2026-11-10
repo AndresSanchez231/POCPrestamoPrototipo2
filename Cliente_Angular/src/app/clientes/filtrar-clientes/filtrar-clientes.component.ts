@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './filtrar-clientes.component.html'
 })
 export class FiltrarClientesComponent {
-  idPrestamo: number | null = null;
+  idPrestamo: string = '';
   clientes: any[] = [];
   error: string = '';
 
@@ -18,9 +18,10 @@ export class FiltrarClientesComponent {
 
   filtrar() {
     if(!this.idPrestamo) return;
+    
+    // Enviamos el ID manual como String
     this.clienteService.listarPorPrestamo(this.idPrestamo).subscribe({
       next: (res: any) => {
-        // FILTRAMOS SOLO LOS ACTIVOS (estado = true)
         this.clientes = res.data.clientesPorPrestamo.filter((c: any) => c.estado === true);
         
         if(this.clientes.length === 0) {

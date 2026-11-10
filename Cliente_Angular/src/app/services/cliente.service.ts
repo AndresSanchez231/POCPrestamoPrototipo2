@@ -14,10 +14,20 @@ export class ClienteService {
     });
   }
 
-  listarPorPrestamo(idPrestamo: number): Observable<any> {
+  // FILTRAR POR ID MANUAL (String)
+  listarPorPrestamo(idPrestamo: string): Observable<any> {
     return this.apollo.query({
-      query: gql`query ($id: Int!) { clientesPorPrestamo(idPrestamo: $id) { idCliente nombreCompleto cedula ingresosMensuales fechaNacimiento estado } }`,
-      variables: { id: idPrestamo },
+      query: gql`query ($idPrestamo: String!) { 
+        clientesPorPrestamo(idPrestamo: $idPrestamo) { 
+          idCliente 
+          nombreCompleto 
+          cedula 
+          ingresosMensuales 
+          fechaNacimiento 
+          estado 
+        } 
+      }`,
+      variables: { idPrestamo: idPrestamo },
       fetchPolicy: 'network-only'
     });
   }
@@ -51,7 +61,6 @@ export class ClienteService {
     });
   }
 
-  // MÉTODO NUEVO PARA LA CONSULTA PERSONALIZADA
   listarClientesConPrestamo(): Observable<any> {
     return this.apollo.query({
       query: gql`query { clientesConDatosPrestamo { idCliente nombreCompleto cedula ingresosMensuales fechaNacimiento estado montoPrestamo tipoPrestamo } }`,

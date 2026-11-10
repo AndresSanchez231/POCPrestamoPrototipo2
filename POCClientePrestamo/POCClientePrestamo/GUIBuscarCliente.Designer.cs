@@ -167,6 +167,7 @@
             txtEstadoRes.ReadOnly = true;
             txtEstadoRes.Size = new Size(125, 27);
             txtEstadoRes.TabIndex = 15;
+            
             // 
             // GUIBuscarCliente
             // 

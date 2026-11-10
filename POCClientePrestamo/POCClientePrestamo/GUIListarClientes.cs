@@ -9,11 +9,11 @@ namespace POCClientePrestamo
     public partial class GUIListarClientes : Form
     {
         private readonly ClienteService _clienteService = new ClienteService();
+        private readonly PrestamoService _prestamoService = new PrestamoService();
 
         public GUIListarClientes()
         {
             InitializeComponent();
-            dgvClientes.AutoGenerateColumns = true; // Forzar columnas automáticas
             GestorEventos.ClienteCambiado += CargarDatosFiltro;
         }
 
@@ -40,7 +40,18 @@ namespace POCClientePrestamo
                     return;
                 }
 
-                var clientes = await _clienteService.ListarClientesPorPrestamoAsync(int.Parse(txtIdPrestamo.Text));
+                // 1. Buscar el préstamo por su ID manual para obtener su ObjectId
+                var prestamos = await _prestamoService.ListarPrestamosAsync();
+                var prestamoSeleccionado = prestamos?.Find(p => p.idPrestamo == int.Parse(txtIdPrestamo.Text));
+
+                if (prestamoSeleccionado == null)
+                {
+                    MessageBox.Show("No se encontró un préstamo con ese ID.");
+                    return;
+                }
+
+                // 2. Usar el ObjectId del préstamo para buscar los clientes
+                var clientes = await _clienteService.ListarClientesPorPrestamoAsync(prestamoSeleccionado._id);
 
                 dgvClientes.DataSource = null;
                 dgvClientes.Columns.Clear();
@@ -59,10 +70,11 @@ namespace POCClientePrestamo
                     {
                         ID = c.idCliente,
                         Nombre = c.nombreCompleto,
-                        Cédula = c.cedula,
-                        Ingresos = c.ingresosMensuales,
+                        Cedula = c.cedula,
+                        Ingresos = c.ingresosMensuales.ToString("N2"),
                         FechaNac = c.fechaNacimiento,
-                        ID_Préstamo = c.idPrestamo,
+                        // MOSTRAMOS EL ID MANUAL DEL PRÉSTAMO, NO EL OBJECTID
+                        ID_Prestamo = prestamoSeleccionado.idPrestamo,
                         Estado = c.estado ? "ACTIVO" : "INACTIVO"
                     });
                 }
@@ -71,7 +83,7 @@ namespace POCClientePrestamo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error al listar: " + ex.Message);
             }
         }
 

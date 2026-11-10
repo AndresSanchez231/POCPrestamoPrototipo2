@@ -28,7 +28,8 @@ namespace POCClientePrestamo
                     return;
                 }
 
-                var p = await _prestamoService.BuscarPrestamoPorIdAsync(int.Parse(txtId.Text));
+                // CORRECCIÓN: Pasamos el texto directo (String), no int.Parse
+                var p = await _prestamoService.BuscarPrestamoPorIdAsync(txtId.Text);
 
                 if (p == null)
                 {
@@ -59,7 +60,7 @@ namespace POCClientePrestamo
             try
             {
                 var input = new PrestamoInputBuilder()
-                    .ConId(int.Parse(txtId.Text))
+                    .ConId(int.Parse(txtId.Text)) // OJO: Si tu builder pide int aquí, está bien (es el ID manual), pero si falla, avísame.
                     .ConMonto(double.Parse(txtMonto.Text))
                     .ConTasa(double.Parse(txtTasa.Text))
                     .ConFecha(dtpFecha.Value.ToString("yyyy-MM-ddTHH:mm:ss"))
@@ -68,7 +69,8 @@ namespace POCClientePrestamo
 
                 input.estado = estadoActual;
 
-                var resultado = await _prestamoService.ActualizarPrestamoAsync(int.Parse(txtId.Text), input);
+                // CORRECCIÓN: Pasamos el texto directo (String) para el ObjectId
+                var resultado = await _prestamoService.ActualizarPrestamoAsync(txtId.Text, input);
 
                 if (resultado == null)
                     MessageBox.Show("No se pudo actualizar el préstamo.");

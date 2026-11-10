@@ -16,10 +16,27 @@ export class ActualizarClienteComponent {
   error: string = '';
   mensaje: string = '';
 
+  // Variables para el ComboBox de préstamos
+  prestamosDisponibles: any[] = [];
+  idPrestamoSeleccionado: string = ''; // Aquí se guarda el ObjectId internamente
+
   constructor(
     private clienteService: ClienteService,
     private prestamoService: PrestamoService
   ) {}
+
+  ngOnInit(): void {
+    this.cargarPrestamos();
+  }
+
+  cargarPrestamos() {
+    this.prestamoService.listarPrestamos().subscribe({
+      next: (res: any) => {
+        this.prestamosDisponibles = res.data.prestamos;
+      },
+      error: (err) => this.error = 'Error al cargar préstamos: ' + err.message
+    });
+  }
 
   buscar() {
     if(!this.id) return;
@@ -30,6 +47,11 @@ export class ActualizarClienteComponent {
         
         if (this.cliente && this.cliente.fechaNacimiento) {
           this.cliente.fechaNacimiento = this.cliente.fechaNacimiento.substring(0, 16);
+        }
+
+        // Asignamos el ObjectId al ComboBox para que se seleccione automáticamente
+        if (this.cliente) {
+          this.idPrestamoSeleccionado = this.cliente.idPrestamo;
         }
       },
       error: (err) => this.error = err.message
@@ -49,45 +71,31 @@ export class ActualizarClienteComponent {
       return;
     }
 
-    // VALIDAR PRÉSTAMO ANTES DE ACTUALIZAR
-    this.prestamoService.listarPrestamos().subscribe({
-      next: (res: any) => {
-        const prestamos = res.data.prestamos;
-        const existe = prestamos.some((p: any) => p.idPrestamo === Number(this.cliente.idPrestamo));
+    // Construimos el objeto con el ObjectId del ComboBox
+    const input = {
+      idCliente: Number(this.id),
+      nombreCompleto: this.cliente.nombreCompleto,
+      cedula: this.cliente.cedula,
+      ingresosMensuales: Number(this.cliente.ingresosMensuales),
+      fechaNacimiento: this.cliente.fechaNacimiento,
+      idPrestamo: this.idPrestamoSeleccionado, // <-- Enviamos el ObjectId
+      estado: this.cliente.estado
+    };
 
-        if (!existe) {
-          this.error = `El préstamo con ID ${this.cliente.idPrestamo} no existe. Verifique el ID.`;
-          return;
-        }
-
-        const input = {
-          idCliente: Number(this.id),
-          nombreCompleto: this.cliente.nombreCompleto,
-          cedula: this.cliente.cedula,
-          ingresosMensuales: Number(this.cliente.ingresosMensuales),
-          fechaNacimiento: this.cliente.fechaNacimiento,
-          idPrestamo: Number(this.cliente.idPrestamo),
-          estado: this.cliente.estado
-        };
-
-        this.clienteService.actualizarCliente(this.id!, input).subscribe({
-          next: () => {
-            this.mensaje = 'Actualizado correctamente.';
-          },
-          error: (err) => {
-            // CAPTURAMOS EL MENSAJE REAL DE JAVA
-            if (err.message.includes('INACTIVO')) {
-              this.error = 'El cliente está INACTIVO. No se puede actualizar.';
-            } else if (err.message.includes('INTERNAL_ERROR')) {
-              // Si Java no da el mensaje exacto, mostramos uno genérico
-              this.error = 'No se pudo actualizar. Verifique que el cliente esté activo.';
-            } else {
-              this.error = err.message;
-            }
-          }
-        });
+    this.clienteService.actualizarCliente(this.id!, input).subscribe({
+      next: () => {
+        this.mensaje = 'Actualizado correctamente.';
       },
-      error: (err) => this.error = err.message
+      error: (err) => {
+        let errorMsg = err.message || '';
+        if (errorMsg.includes('INACTIVO')) {
+          this.error = 'El préstamo está INACTIVO. No se puede asociar.';
+        } else if (errorMsg.includes('INTERNAL_ERROR')) {
+          this.error = 'No se pudo actualizar. Verifique que el préstamo esté activo.';
+        } else {
+          this.error = errorMsg;
+        }
+      }
     });
   }
 }

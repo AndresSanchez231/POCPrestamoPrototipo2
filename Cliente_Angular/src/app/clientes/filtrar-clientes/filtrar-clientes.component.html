@@ -1,10 +1,15 @@
 <div style="padding: 20px;">
   <h2>Filtrar Clientes por Préstamo</h2>
-  <input type="number" [(ngModel)]="idPrestamo" placeholder="ID Préstamo">
-  <button (click)="filtrar()">Filtrar</button>
-  <div *ngIf="error" style="color:red;">{{ error }}</div>
+  
+  <div style="margin-bottom: 15px;">
+    <label>ID Préstamo (Manual): </label>
+    <input type="text" [(ngModel)]="idPrestamo" placeholder="Ej: 1" style="padding: 5px; width: 100px;">
+    <button (click)="filtrar()" style="padding: 5px 15px; margin-left: 10px;">Filtrar</button>
+  </div>
 
-  <table border="1" style="width: 100%; margin-top: 10px;">
+  <div *ngIf="error" style="color:red; margin-bottom: 10px;">{{ error }}</div>
+
+  <table border="1" style="width: 100%; margin-top: 10px; text-align: left;">
     <thead>
       <tr style="background-color: #3f51b5; color: white;">
         <th>ID</th><th>Nombre</th><th>Cédula</th><th>Ingresos</th><th>Fecha Nac</th><th>Estado</th>

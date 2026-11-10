@@ -14,6 +14,8 @@ namespace POCClientePrestamo
         {
             InitializeComponent();
             dgvClientes.AutoGenerateColumns = true;
+
+            // CORRECCIÓN: Nos suscribimos directamente con CargarDatos si el evento no requiere parámetros
             GestorEventos.ClienteCambiado += CargarDatos;
         }
 
@@ -27,6 +29,7 @@ namespace POCClientePrestamo
             CargarDatos();
         }
 
+        // Si el evento es de tipo Action (sin parámetros), esta firma está perfecta.
         private async void CargarDatos()
         {
             if (this.IsDisposed) return;
@@ -35,8 +38,8 @@ namespace POCClientePrestamo
                 var lista = await _clienteService.ListarClientesConDatosPrestamoAsync();
 
                 dgvClientes.DataSource = null;
-                dgvClientes.Columns.Clear(); // Limpiamos columnas viejas
-                dgvClientes.AutoGenerateColumns = true; // Forzamos generación automática
+                dgvClientes.Columns.Clear();
+                dgvClientes.AutoGenerateColumns = true;
 
                 dgvClientes.DataSource = lista;
             }
@@ -46,9 +49,9 @@ namespace POCClientePrestamo
             }
         }
 
-        // Desuscripción al cerrar la ventana (para evitar errores)
         private void GUIListarClientesConPrestamo_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // CORRECCIÓN: Nos desuscribimos usando el mismo método al que nos suscribimos
             GestorEventos.ClienteCambiado -= CargarDatos;
         }
     }

@@ -25,7 +25,8 @@ namespace POCClientePrestamo
                     return;
                 }
 
-                var p = await _prestamoService.BuscarPrestamoPorIdAsync(int.Parse(txtId.Text));
+                // CORRECCIÓN: Pasamos el texto directo (String), no int.Parse
+                var p = await _prestamoService.BuscarPrestamoPorIdAsync(txtId.Text);
 
                 if (p == null)
                 {
@@ -64,7 +65,8 @@ namespace POCClientePrestamo
 
             try
             {
-                bool eliminado = await _prestamoService.EliminarPrestamoAsync(int.Parse(txtId.Text));
+                // CORRECCIÓN: Pasamos el texto directo (String) para el ObjectId
+                bool eliminado = await _prestamoService.EliminarPrestamoAsync(txtId.Text);
 
                 if (eliminado)
                 {
@@ -92,6 +94,11 @@ namespace POCClientePrestamo
             txtFecha.Clear();
             txtTipo.Clear();
             txtEstado.Clear();
+        }
+
+        private void txtTipo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

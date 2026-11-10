@@ -1,5 +1,6 @@
 package org.example.model;
 
+import org.bson.types.ObjectId;
 import java.time.LocalDateTime;
 
 public record ClienteInput(
@@ -8,6 +9,6 @@ public record ClienteInput(
         String cedula,
         double ingresosMensuales,
         LocalDateTime fechaNacimiento,
-        int idPrestamo,
-        boolean estado // <-- AGREGAR ESTO
+        ObjectId idPrestamo, // <-- ObjectId
+        boolean estado
 ) {}

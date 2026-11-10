@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using POCClientePrestamo.builders;
+using POCClientePrestamo.model;
 using POCClientePrestamo.services;
 
 namespace POCClientePrestamo
@@ -8,6 +8,7 @@ namespace POCClientePrestamo
     public partial class GUIActualizarCliente : Form
     {
         private readonly ClienteService _clienteService = new ClienteService();
+        private readonly PrestamoService _prestamoService = new PrestamoService();
         private bool estadoActual = true;
 
         public GUIActualizarCliente()
@@ -15,7 +16,30 @@ namespace POCClientePrestamo
             InitializeComponent();
         }
 
-        private void GUIActualizarCliente_Load(object sender, EventArgs e) { }
+        private async void GUIActualizarCliente_Load(object sender, EventArgs e)
+        {
+            await CargarPrestamos();
+        }
+
+        private async System.Threading.Tasks.Task CargarPrestamos()
+        {
+            try
+            {
+                var prestamos = await _prestamoService.ListarPrestamosAsync();
+
+                if (prestamos != null && prestamos.Count > 0)
+                {
+                    cmbPrestamo.DataSource = prestamos;
+                    cmbPrestamo.DisplayMember = "idPrestamo";
+                    cmbPrestamo.ValueMember = "_id";
+                    cmbPrestamo.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar préstamos: " + ex.Message);
+            }
+        }
 
         private async void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -40,16 +64,32 @@ namespace POCClientePrestamo
                 txtCedula.Text = c.cedula;
                 txtIngresos.Text = c.ingresosMensuales.ToString();
                 dtpFechaNacimiento.Value = DateTime.Parse(c.fechaNacimiento);
-                txtIdPrestamo.Text = c.idPrestamo.ToString();
+
+                // Buscar el índice del préstamo en el ComboBox comparando el ObjectId
+                bool encontrado = false;
+                for (int i = 0; i < cmbPrestamo.Items.Count; i++)
+                {
+                    var item = cmbPrestamo.Items[i] as PrestamoData;
+                    if (item != null && item._id == c.idPrestamo)
+                    {
+                        cmbPrestamo.SelectedIndex = i;
+                        encontrado = true;
+                        break;
+                    }
+                }
+
+                if (!encontrado)
+                {
+                    MessageBox.Show("Advertencia: El préstamo asociado a este cliente ya no existe en la base de datos.");
+                }
 
                 estadoActual = c.estado;
-
                 HabilitarCampos(true);
 
                 if (!c.estado)
                 {
                     MessageBox.Show("Este cliente está INACTIVO. No se puede actualizar.");
-                    btnActualizar.Enabled = false; // Deshabilitamos el botón
+                    btnActualizar.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -62,16 +102,35 @@ namespace POCClientePrestamo
         {
             try
             {
-                var input = new ClienteInputBuilder()
-                    .ConId(int.Parse(txtId.Text))
-                    .ConNombre(txtNombre.Text)
-                    .ConCedula(txtCedula.Text)
-                    .ConIngresos(double.Parse(txtIngresos.Text))
-                    .ConFechaNacimiento(dtpFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ss"))
-                    .ConIdPrestamo(int.Parse(txtIdPrestamo.Text))
-                    .Build();
+                var prestamoSeleccionado = cmbPrestamo.SelectedItem as PrestamoData;
 
-                input.estado = estadoActual;
+                if (prestamoSeleccionado == null || string.IsNullOrEmpty(prestamoSeleccionado._id))
+                {
+                    MessageBox.Show("Debe seleccionar un préstamo válido.");
+                    return;
+                }
+
+                if (System.Text.RegularExpressions.Regex.IsMatch(txtNombre.Text, @"\d"))
+                {
+                    MessageBox.Show("El nombre no puede contener números.");
+                    return;
+                }
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtCedula.Text, @"^\d+$"))
+                {
+                    MessageBox.Show("La cédula debe contener solo números.");
+                    return;
+                }
+
+                var input = new ClienteInput
+                {
+                    idCliente = int.Parse(txtId.Text),
+                    nombreCompleto = txtNombre.Text,
+                    cedula = txtCedula.Text,
+                    ingresosMensuales = double.Parse(txtIngresos.Text),
+                    fechaNacimiento = dtpFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ss"),
+                    idPrestamo = prestamoSeleccionado._id, // <-- ObjectId
+                    estado = estadoActual
+                };
 
                 var resultado = await _clienteService.ActualizarClienteAsync(int.Parse(txtId.Text), input);
 
@@ -82,19 +141,7 @@ namespace POCClientePrestamo
             }
             catch (Exception ex)
             {
-                // CAPTURAMOS EL MENSAJE REAL DE JAVA
-                if (ex.Message.Contains("INACTIVO"))
-                {
-                    MessageBox.Show("El cliente está INACTIVO. No se puede actualizar.");
-                }
-                else if (ex.Message.Contains("INTERNAL_ERROR"))
-                {
-                    MessageBox.Show("No se pudo actualizar. Verifique que el cliente esté activo.");
-                }
-                else
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -104,7 +151,7 @@ namespace POCClientePrestamo
             txtCedula.Enabled = habilitar;
             txtIngresos.Enabled = habilitar;
             dtpFechaNacimiento.Enabled = habilitar;
-            txtIdPrestamo.Enabled = habilitar;
+            cmbPrestamo.Enabled = habilitar;
             btnActualizar.Enabled = habilitar;
         }
     }

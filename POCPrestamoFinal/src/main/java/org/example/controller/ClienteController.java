@@ -1,11 +1,15 @@
 package org.example.controller;
 
+import org.bson.types.ObjectId;
 import org.example.model.Cliente;
 import org.example.model.ClienteInput;
 import org.example.model.Prestamo;
 import org.example.servicios.ServicioCliente;
 import org.example.servicios.ServicioPrestamo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -26,13 +30,16 @@ public class ClienteController {
     @Autowired
     private ServicioPrestamo servicioPrestamo;
 
+    @Autowired
+    private MongoTemplate mongoTemplate; // <-- NECESARIO PARA BUSCAR EL PRÉSTAMO
+
     @QueryMapping
     public List<Cliente> clientes() {
         return servicioCliente.listarTodos();
     }
 
     @QueryMapping
-    public List<Cliente> clientesPorPrestamo(@Argument int idPrestamo) {
+    public List<Cliente> clientesPorPrestamo(@Argument String idPrestamo) {
         return servicioCliente.listarClientesPorPrestamo(idPrestamo);
     }
 
@@ -41,7 +48,6 @@ public class ClienteController {
         return servicioCliente.buscarPorId(idCliente);
     }
 
-    // --- CONSULTA PERSONALIZADA (MAESTRO - DETALLE) ---
     @QueryMapping
     public List<Map<String, Object>> clientesConDatosPrestamo() {
         List<Cliente> clientes = servicioCliente.listarTodos();
@@ -56,14 +62,27 @@ public class ClienteController {
             map.put("fechaNacimiento", c.getFechaNacimiento().toString());
             map.put("estado", c.isEstado());
 
-            Optional<Prestamo> prestamo = servicioPrestamo.buscarPorId(c.getIdPrestamo());
-            if (prestamo.isPresent()) {
-                map.put("montoPrestamo", prestamo.get().getMonto());
-                map.put("tipoPrestamo", prestamo.get().getTipo());
+            // CONVERSIÓN: ObjectId a String para el mapa
+            if (c.getIdPrestamo() != null) {
+                map.put("idPrestamo", c.getIdPrestamo().toHexString());
+
+                // Buscamos el préstamo por su _id (ObjectId)
+                Query query = new Query(Criteria.where("_id").is(c.getIdPrestamo()));
+                Prestamo p = mongoTemplate.findOne(query, Prestamo.class);
+
+                if (p != null) {
+                    map.put("montoPrestamo", p.getMonto());
+                    map.put("tipoPrestamo", p.getTipo());
+                } else {
+                    map.put("montoPrestamo", 0.0);
+                    map.put("tipoPrestamo", "N/A");
+                }
             } else {
+                map.put("idPrestamo", "");
                 map.put("montoPrestamo", 0.0);
                 map.put("tipoPrestamo", "N/A");
             }
+
             resultado.add(map);
         }
         return resultado;
@@ -71,12 +90,34 @@ public class ClienteController {
 
     @MutationMapping
     public Cliente addCliente(@Argument("input") ClienteInput input) {
-        return servicioCliente.addCliente(input);
+        ObjectId objId = new ObjectId(input.idPrestamo().toString());
+
+        ClienteInput newInput = new ClienteInput(
+                input.idCliente(),
+                input.nombreCompleto(),
+                input.cedula(),
+                input.ingresosMensuales(),
+                input.fechaNacimiento(),
+                objId,
+                input.estado()
+        );
+        return servicioCliente.addCliente(newInput);
     }
 
     @MutationMapping
     public Optional<Cliente> actualizarCliente(@Argument int idCliente, @Argument("input") ClienteInput input) {
-        return servicioCliente.actualizarCliente(idCliente, input);
+        ObjectId objId = new ObjectId(input.idPrestamo().toString());
+
+        ClienteInput newInput = new ClienteInput(
+                input.idCliente(),
+                input.nombreCompleto(),
+                input.cedula(),
+                input.ingresosMensuales(),
+                input.fechaNacimiento(),
+                objId,
+                input.estado()
+        );
+        return servicioCliente.actualizarCliente(idCliente, newInput);
     }
 
     @MutationMapping

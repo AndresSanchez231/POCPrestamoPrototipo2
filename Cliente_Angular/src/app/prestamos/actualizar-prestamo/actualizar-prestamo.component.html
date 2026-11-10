@@ -2,7 +2,8 @@
   <h2>Actualizar Préstamo (Búsqueda Previa)</h2>
   
   <div style="margin-bottom: 20px;">
-    <input type="number" [(ngModel)]="id" placeholder="ID Préstamo" style="padding: 5px;">
+    <!-- Cambiado a type="text" para que envíe String -->
+    <input type="text" [(ngModel)]="id" placeholder="ID Préstamo (Ej: 1)" style="padding: 5px;">
     <button (click)="buscar()" style="padding: 5px 15px; margin-left: 10px;">Buscar</button>
   </div>
 

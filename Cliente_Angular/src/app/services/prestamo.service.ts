@@ -7,25 +7,25 @@ import { PrestamoInput } from '../models/prestamo.model';
 export class PrestamoService {
   constructor(private apollo: Apollo) {}
 
-    listarPrestamos(): Observable<any> {
+  listarPrestamos(): Observable<any> {
     return this.apollo.query({
-      query: gql`query { prestamos { idPrestamo monto tasaIntereses fechaRegistro tipo estado } }`,
-      fetchPolicy: 'network-only' // <-- ESTO ES VITAL
-    });
-  }
-
-  buscarPrestamo(id: number): Observable<any> {
-    return this.apollo.query({
-      query: gql`query ($id: Int!) { prestamoPorId(idPrestamo: $id) { idPrestamo monto tasaIntereses fechaRegistro tipo estado } }`,
-      variables: { id },
+      query: gql`query { prestamos { _id idPrestamo monto tasaIntereses fechaRegistro tipo estado } }`,
       fetchPolicy: 'network-only'
     });
   }
 
-  // CORRECCIÓN: Ahora trae todos los atributos
+  // AHORA RECIBE UN number (Int)
+  buscarPrestamo(id: number): Observable<any> {
+    return this.apollo.query({
+      query: gql`query ($id: Int!) { prestamoPorId(idPrestamo: $id) { _id idPrestamo monto tasaIntereses fechaRegistro tipo estado } }`,
+      variables: { id: id },
+      fetchPolicy: 'network-only'
+    });
+  }
+
   listarPorTipo(tipo: string): Observable<any> {
     return this.apollo.query({
-      query: gql`query ($tipo: String!) { prestamosPorTipoInmueble(tipoInmueble: $tipo) { idPrestamo monto tasaIntereses fechaRegistro tipo estado } }`,
+      query: gql`query ($tipo: String!) { prestamosPorTipoInmueble(tipoInmueble: $tipo) { _id idPrestamo monto tasaIntereses fechaRegistro tipo estado } }`,
       variables: { tipo },
       fetchPolicy: 'network-only'
     });
@@ -33,18 +33,20 @@ export class PrestamoService {
 
   insertarPrestamo(input: PrestamoInput): Observable<any> {
     return this.apollo.mutate({
-      mutation: gql`mutation ($input: PrestamoInput!) { addPrestamo(input: $input) { idPrestamo } }`,
+      mutation: gql`mutation ($input: PrestamoInput!) { addPrestamo(input: $input) { _id idPrestamo } }`,
       variables: { input }
     });
   }
 
+  // AHORA RECIBE UN number (Int)
   actualizarPrestamo(id: number, input: PrestamoInput): Observable<any> {
     return this.apollo.mutate({
-      mutation: gql`mutation ($id: Int!, $input: PrestamoInput!) { actualizarPrestamo(idPrestamo: $id, input: $input) { idPrestamo } }`,
+      mutation: gql`mutation ($id: Int!, $input: PrestamoInput!) { actualizarPrestamo(idPrestamo: $id, input: $input) { _id idPrestamo } }`,
       variables: { id, input }
     });
   }
 
+  // AHORA RECIBE UN number (Int)
   eliminarPrestamo(id: number): Observable<any> {
     return this.apollo.mutate({
       mutation: gql`mutation ($id: Int!) { eliminarPrestamo(idPrestamo: $id) }`,

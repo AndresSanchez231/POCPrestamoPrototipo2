@@ -60,6 +60,7 @@
             txtIdPrestamo.Name = "txtIdPrestamo";
             txtIdPrestamo.Size = new Size(125, 27);
             txtIdPrestamo.TabIndex = 2;
+            
             // 
             // dgvClientes
             // 

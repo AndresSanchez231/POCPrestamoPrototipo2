@@ -19,7 +19,7 @@ namespace POCClientePrestamo.services
                 new SystemTextJsonSerializer());
         }
 
-        // 🔹 LISTAR TODOS
+        // 1. LISTAR PRÉSTAMOS
         public async Task<List<PrestamoData>?> ListarPrestamosAsync()
         {
             var request = new GraphQLRequest
@@ -27,6 +27,7 @@ namespace POCClientePrestamo.services
                 Query = @"
                     query {
                         prestamos {
+                            _id
                             idPrestamo
                             monto
                             tasaIntereses
@@ -39,21 +40,19 @@ namespace POCClientePrestamo.services
             };
 
             var response = await _client.SendQueryAsync<ResponseListaPrestamos>(request);
-
-            if (response.Errors != null && response.Errors.Length > 0)
-                throw new Exception(response.Errors[0].Message);
-
+            if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
             return response.Data?.prestamos;
         }
 
-        // 🔹 BUSCAR POR ID
-        public async Task<PrestamoData?> BuscarPrestamoPorIdAsync(int idPrestamo)
+        // 2. BUSCAR PRÉSTAMO POR ID
+        public async Task<PrestamoData?> BuscarPrestamoPorIdAsync(string idPrestamo)
         {
             var request = new GraphQLRequest
             {
                 Query = @"
-                    query buscarPrestamoPorId ($id: Int!) {
-                        prestamoPorId(idPrestamo: $id) {
+                    query buscarPrestamo ($idPrestamo: String!) {
+                        prestamoPorId(idPrestamo: $idPrestamo) {
+                            _id
                             idPrestamo
                             monto
                             tasaIntereses
@@ -63,18 +62,41 @@ namespace POCClientePrestamo.services
                         }
                     }
                 ",
-                Variables = new { id = idPrestamo }
+                Variables = new { idPrestamo }
             };
 
             var response = await _client.SendQueryAsync<ResponsePrestamo>(request);
-
-            if (response.Errors != null && response.Errors.Length > 0)
-                throw new Exception(response.Errors[0].Message);
-
+            if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
             return response.Data?.prestamo;
         }
 
-        // 🔹 INSERTAR
+        // 3. LISTAR POR TIPO (Método que faltaba)
+        public async Task<List<PrestamoData>?> ListarPorTipoInmuebleAsync(string tipo)
+        {
+            var request = new GraphQLRequest
+            {
+                Query = @"
+                    query listarPorTipo ($tipo: String!) {
+                        prestamosPorTipoInmueble(tipoInmueble: $tipo) {
+                            _id
+                            idPrestamo
+                            monto
+                            tasaIntereses
+                            fechaRegistro
+                            tipo
+                            estado
+                        }
+                    }
+                ",
+                Variables = new { tipo }
+            };
+
+            var response = await _client.SendQueryAsync<ResponseListaPorTipo>(request);
+            if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
+            return response.Data?.prestamos;
+        }
+
+        // 4. INSERTAR PRÉSTAMO
         public async Task<PrestamoData?> InsertarPrestamoAsync(PrestamoInput input)
         {
             var request = new GraphQLRequest
@@ -83,11 +105,6 @@ namespace POCClientePrestamo.services
                     mutation addPrestamo ($input: PrestamoInput!) {
                         addPrestamo(input: $input) {
                             idPrestamo
-                            monto
-                            tasaIntereses
-                            fechaRegistro
-                            tipo
-                            estado
                         }
                     }
                 ",
@@ -95,88 +112,46 @@ namespace POCClientePrestamo.services
             };
 
             var response = await _client.SendMutationAsync<AddPrestamoResponse>(request);
-
-            if (response.Errors != null && response.Errors.Length > 0)
-                throw new Exception(response.Errors[0].Message);
-
+            if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
             return response.Data?.AddPrestamo;
         }
 
-        // 🔹 ACTUALIZAR
-        public async Task<PrestamoData?> ActualizarPrestamoAsync(int idPrestamo, PrestamoInput input)
+        // 5. ACTUALIZAR PRÉSTAMO
+        public async Task<PrestamoData?> ActualizarPrestamoAsync(string idPrestamo, PrestamoInput input)
         {
             var request = new GraphQLRequest
             {
                 Query = @"
-                    mutation actualizarPrestamo ($id: Int!, $input: PrestamoInput!) {
-                        actualizarPrestamo(idPrestamo: $id, input: $input) {
+                    mutation actualizarPrestamo ($idPrestamo: String!, $input: PrestamoInput!) {
+                        actualizarPrestamo(idPrestamo: $idPrestamo, input: $input) {
                             idPrestamo
-                            monto
-                            tasaIntereses
-                            fechaRegistro
-                            tipo
-                            estado
                         }
                     }
                 ",
-                Variables = new { id = idPrestamo, input }
+                Variables = new { idPrestamo, input }
             };
 
             var response = await _client.SendMutationAsync<AddPrestamoResponse>(request);
-
-            if (response.Errors != null && response.Errors.Length > 0)
-                throw new Exception(response.Errors[0].Message);
-
+            if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
             return response.Data?.ActualizarPrestamo;
         }
 
-        // 🔹 ELIMINAR (borrado lógico)
-        public async Task<bool> EliminarPrestamoAsync(int idPrestamo)
+        // 6. ELIMINAR PRÉSTAMO
+        public async Task<bool> EliminarPrestamoAsync(string idPrestamo)
         {
             var request = new GraphQLRequest
             {
                 Query = @"
-                    mutation eliminarPrestamo ($id: Int!) {
-                        eliminarPrestamo(idPrestamo: $id)
+                    mutation eliminarPrestamo ($idPrestamo: String!) {
+                        eliminarPrestamo(idPrestamo: $idPrestamo)
                     }
                 ",
-                Variables = new { id = idPrestamo }
+                Variables = new { idPrestamo }
             };
 
             var response = await _client.SendMutationAsync<DeletePrestamoResponse>(request);
-
-            if (response.Errors != null && response.Errors.Length > 0)
-                throw new Exception(response.Errors[0].Message);
-
+            if (response.Errors != null && response.Errors.Length > 0) throw new Exception(response.Errors[0].Message);
             return response.Data.EliminarPrestamo;
-        }
-
-        // 🔹 FILTRAR POR TIPO DE INMUEBLE
-        public async Task<List<PrestamoData>?> ListarPorTipoInmuebleAsync(string tipoInmueble)
-        {
-            var request = new GraphQLRequest
-            {
-                Query = @"
-                    query filtrarPorTipo ($tipoInmueble: String!) {
-                        prestamosPorTipoInmueble(tipoInmueble: $tipoInmueble) {
-                            idPrestamo
-                            monto
-                            tasaIntereses
-                            fechaRegistro
-                            tipo
-                            estado
-                        }
-                    }
-                ",
-                Variables = new { tipoInmueble }
-            };
-
-            var response = await _client.SendQueryAsync<ResponseListaPorTipo>(request);
-
-            if (response.Errors != null && response.Errors.Length > 0)
-                throw new Exception(response.Errors[0].Message);
-
-            return response.Data?.prestamos;
         }
     }
 }

@@ -41,7 +41,7 @@ namespace POCClientePrestamo.builders
             return this;
         }
 
-        public ClienteInputBuilder ConIdPrestamo(int idPrestamo)
+        public ClienteInputBuilder ConIdPrestamo(string idPrestamo)
         {
             _cliente.idPrestamo = idPrestamo;
             return this;

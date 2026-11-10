@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace POCClientePrestamo.model
 {
     // ==========================================
-    // MODELOS DE RESPUESTA (READ)
+    // RESPUESTAS
     // ==========================================
 
     public class ResponsePrestamo
@@ -40,7 +40,6 @@ namespace POCClientePrestamo.model
         public bool EliminarPrestamo { get; set; }
     }
 
-    // --- RESPUESTAS DE CLIENTE ---
     public class ResponseCliente
     {
         [JsonPropertyName("clientePorId")]
@@ -71,11 +70,62 @@ namespace POCClientePrestamo.model
         public bool EliminarCliente { get; set; }
     }
 
-    // --- NUEVAS CLASES PARA LA CONSULTA PERSONALIZADA ---
     public class ResponseClientesConPrestamo
     {
         [JsonPropertyName("clientesConDatosPrestamo")]
         public List<ClienteConPrestamoData> clientesConDatosPrestamo { get; set; }
+    }
+
+    // ==========================================
+    // MODELOS DE DATOS
+    // ==========================================
+
+    public class PrestamoData
+    {
+        [JsonPropertyName("_id")]
+        public string _id { get; set; } // <-- ObjectId de Mongo
+
+        [JsonPropertyName("idPrestamo")]
+        public int idPrestamo { get; set; }
+
+        [JsonPropertyName("monto")]
+        public double monto { get; set; }
+
+        [JsonPropertyName("tasaIntereses")]
+        public double tasaIntereses { get; set; }
+
+        [JsonPropertyName("fechaRegistro")]
+        public string fechaRegistro { get; set; }
+
+        [JsonPropertyName("tipo")]
+        public string tipo { get; set; }
+
+        [JsonPropertyName("estado")]
+        public bool estado { get; set; }
+    }
+
+    public class ClienteData
+    {
+        [JsonPropertyName("idCliente")]
+        public int idCliente { get; set; }
+
+        [JsonPropertyName("nombreCompleto")]
+        public string nombreCompleto { get; set; }
+
+        [JsonPropertyName("cedula")]
+        public string cedula { get; set; }
+
+        [JsonPropertyName("ingresosMensuales")]
+        public double ingresosMensuales { get; set; }
+
+        [JsonPropertyName("fechaNacimiento")]
+        public string fechaNacimiento { get; set; }
+
+        [JsonPropertyName("idPrestamo")]
+        public string idPrestamo { get; set; } // <-- String (ObjectId)
+
+        [JsonPropertyName("estado")]
+        public bool estado { get; set; }
     }
 
     public class ClienteConPrestamoData
@@ -106,59 +156,7 @@ namespace POCClientePrestamo.model
     }
 
     // ==========================================
-    // MODELOS DE DATOS (OBJETOS)
-    // ==========================================
-
-    public class PrestamoData
-    {
-        [JsonPropertyName("idPrestamo")]
-        public int idPrestamo { get; set; }
-
-        [JsonPropertyName("monto")]
-        public double monto { get; set; }
-
-        [JsonPropertyName("tasaIntereses")]
-        public double tasaIntereses { get; set; }
-
-        [JsonPropertyName("fechaRegistro")]
-        public string fechaRegistro { get; set; }
-
-        [JsonPropertyName("tipo")]
-        public string tipo { get; set; }
-
-        [JsonPropertyName("estado")]
-        public bool estado { get; set; }
-
-        [JsonPropertyName("clientes")]
-        public List<ClienteData> clientes { get; set; }
-    }
-
-    public class ClienteData
-    {
-        [JsonPropertyName("idCliente")]
-        public int idCliente { get; set; }
-
-        [JsonPropertyName("nombreCompleto")]
-        public string nombreCompleto { get; set; }
-
-        [JsonPropertyName("cedula")]
-        public string cedula { get; set; }
-
-        [JsonPropertyName("ingresosMensuales")]
-        public double ingresosMensuales { get; set; }
-
-        [JsonPropertyName("fechaNacimiento")]
-        public string fechaNacimiento { get; set; }
-
-        [JsonPropertyName("idPrestamo")]
-        public int idPrestamo { get; set; }
-
-        [JsonPropertyName("estado")]
-        public bool estado { get; set; }
-    }
-
-    // ==========================================
-    // MODELOS DE ENTRADA (INPUT)
+    // INPUTS
     // ==========================================
 
     public class PrestamoInput
@@ -200,7 +198,7 @@ namespace POCClientePrestamo.model
         public string fechaNacimiento { get; set; }
 
         [JsonPropertyName("idPrestamo")]
-        public int idPrestamo { get; set; }
+        public string idPrestamo { get; set; } // <-- String (ObjectId)
 
         [JsonPropertyName("estado")]
         public bool estado { get; set; }

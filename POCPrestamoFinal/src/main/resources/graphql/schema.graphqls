@@ -4,11 +4,12 @@ type Cliente {
     cedula: String
     ingresosMensuales: Float
     fechaNacimiento: String
-    idPrestamo: Int
+    idPrestamo: String
     estado: Boolean
 }
 
 type Prestamo {
+    _id: String
     idPrestamo: Int
     monto: Float
     tasaIntereses: Float
@@ -18,7 +19,6 @@ type Prestamo {
     clientes: [Cliente]
 }
 
-# --- TIPO NUEVO PARA LA CONSULTA PERSONALIZADA ---
 type ClienteConPrestamo {
     idCliente: Int
     nombreCompleto: String
@@ -36,7 +36,7 @@ input ClienteInput {
     cedula: String!
     ingresosMensuales: Float!
     fechaNacimiento: String!
-    idPrestamo: Int!
+    idPrestamo: String!
     estado: Boolean!
 }
 
@@ -50,27 +50,19 @@ input PrestamoInput {
 }
 
 type Query {
-    # Consultas de Préstamo
     prestamos: [Prestamo]
-    prestamoPorId(idPrestamo: Int!): Prestamo
+    prestamoPorId(idPrestamo: Int!): Prestamo  # <-- AHORA ES Int!
     prestamosPorTipoInmueble(tipoInmueble: String!): [Prestamo]
-
-    # Consultas de Cliente
     clientes: [Cliente]
-    clientesPorPrestamo(idPrestamo: Int!): [Cliente]
+    clientesPorPrestamo(idPrestamo: String!): [Cliente]
     clientePorId(idCliente: Int!): Cliente
-
-    # NUEVA CONSULTA PERSONALIZADA
     clientesConDatosPrestamo: [ClienteConPrestamo]
 }
 
 type Mutation {
-    # Mutaciones de Préstamo
     addPrestamo(input: PrestamoInput!): Prestamo
     actualizarPrestamo(idPrestamo: Int!, input: PrestamoInput!): Prestamo
     eliminarPrestamo(idPrestamo: Int!): Boolean
-
-    # Mutaciones de Cliente
     addCliente(input: ClienteInput!): Cliente
     actualizarCliente(idCliente: Int!, input: ClienteInput!): Cliente
     eliminarCliente(idCliente: Int!): Boolean

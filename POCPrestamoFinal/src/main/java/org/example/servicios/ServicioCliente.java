@@ -1,7 +1,9 @@
 package org.example.servicios;
 
+import org.bson.types.ObjectId;
 import org.example.model.Cliente;
 import org.example.model.ClienteInput;
+import org.example.model.Prestamo;
 import org.example.repository.ClienteRepository;
 import org.example.repository.PrestamoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,37 +32,65 @@ public class ServicioCliente {
         return clienteRepository.findAll();
     }
 
-    public List<Cliente> listarClientesPorPrestamo(int idPrestamo) {
-        return clienteRepository.findByIdPrestamo(idPrestamo);
+    public List<Cliente> listarClientesPorPrestamo(String idPrestamo) {
+        ObjectId objId = null;
+        try {
+            int idManual = Integer.parseInt(idPrestamo);
+            Query queryPrestamo = new Query(Criteria.where("idPrestamo").is(idManual));
+            Prestamo prestamo = mongoTemplate.findOne(queryPrestamo, Prestamo.class);
+            if (prestamo != null) {
+                objId = new ObjectId(prestamo.get_id());
+            }
+        } catch (NumberFormatException e) {
+            try {
+                objId = new ObjectId(idPrestamo);
+            } catch (IllegalArgumentException ex) {
+                return List.of();
+            }
+        }
+
+        if (objId == null) return List.of();
+
+        Query query = new Query(Criteria.where("idPrestamo").is(objId));
+        return mongoTemplate.find(query, Cliente.class);
     }
 
     public Optional<Cliente> buscarPorId(int idCliente) {
-        return clienteRepository.findById(idCliente);
+        Query query = new Query(Criteria.where("idCliente").is(idCliente));
+        Cliente c = mongoTemplate.findOne(query, Cliente.class);
+        return Optional.ofNullable(c);
     }
 
-    // CREATE CON VALIDACIONES
     public Cliente addCliente(ClienteInput input) {
         // 1. Validar que el préstamo exista
-        if (!prestamoRepository.existsById(input.idPrestamo())) {
-            throw new RuntimeException("El préstamo con ID " + input.idPrestamo() + " no existe.");
+        Query queryPrestamo = new Query(Criteria.where("_id").is(input.idPrestamo()));
+        Prestamo prestamo = mongoTemplate.findOne(queryPrestamo, Prestamo.class);
+
+        if (prestamo == null) {
+            throw new RuntimeException("El préstamo con ObjectId " + input.idPrestamo().toHexString() + " no existe.");
         }
 
-        // 2. Validar que el ID del cliente no esté duplicado
-        if (clienteRepository.existsById(input.idCliente())) {
+        // 2. VALIDACIÓN CRÍTICA: El préstamo debe estar ACTIVO
+        if (!prestamo.isEstado()) {
+            throw new RuntimeException("El préstamo con ID " + prestamo.getIdPrestamo() + " está INACTIVO. No se pueden agregar clientes.");
+        }
+
+        // 3. Validar que el idCliente no exista
+        if (buscarPorId(input.idCliente()).isPresent()) {
             throw new RuntimeException("El cliente con ID " + input.idCliente() + " ya existe.");
         }
 
-        // 3. Validar cédula solo números
+        // 4. Validaciones de formato
         if (!input.cedula().matches("\\d+")) {
             throw new RuntimeException("La cédula debe contener solo números.");
         }
-
-        // 4. Validar nombre sin números
         if (input.nombreCompleto().matches(".*\\d.*")) {
             throw new RuntimeException("El nombre no puede contener números.");
         }
 
+        // 5. Crear el cliente
         Cliente c = new Cliente(
+                null,
                 input.idCliente(),
                 input.nombreCompleto(),
                 input.cedula(),
@@ -72,16 +102,24 @@ public class ServicioCliente {
         return clienteRepository.save(c);
     }
 
-    // UPDATE CON MONGOTEMPLATE (A PRUEBA DE FALLOS)
     public Optional<Cliente> actualizarCliente(int idCliente, ClienteInput input) {
-        Optional<Cliente> existente = clienteRepository.findById(idCliente);
+        Optional<Cliente> existente = buscarPorId(idCliente);
         if (existente.isEmpty()) return Optional.empty();
 
         if (!existente.get().isEstado()) {
             throw new RuntimeException("El cliente con ID " + idCliente + " está INACTIVO y no se puede actualizar.");
         }
 
-        // Validaciones
+        // VALIDACIÓN: El nuevo préstamo debe estar ACTIVO
+        Query queryPrestamo = new Query(Criteria.where("_id").is(input.idPrestamo()));
+        Prestamo prestamo = mongoTemplate.findOne(queryPrestamo, Prestamo.class);
+        if (prestamo == null) {
+            throw new RuntimeException("El préstamo con ObjectId " + input.idPrestamo().toHexString() + " no existe.");
+        }
+        if (!prestamo.isEstado()) {
+            throw new RuntimeException("El préstamo con ID " + prestamo.getIdPrestamo() + " está INACTIVO. No se puede asociar.");
+        }
+
         if (!input.cedula().matches("\\d+")) {
             throw new RuntimeException("La cédula debe contener solo números.");
         }
@@ -89,7 +127,7 @@ public class ServicioCliente {
             throw new RuntimeException("El nombre no puede contener números.");
         }
 
-        Query query = new Query(Criteria.where("_id").is(idCliente));
+        Query query = new Query(Criteria.where("idCliente").is(idCliente));
         Update update = new Update()
                 .set("nombreCompleto", input.nombreCompleto())
                 .set("cedula", input.cedula())
@@ -104,7 +142,7 @@ public class ServicioCliente {
     }
 
     public boolean eliminarCliente(int idCliente) {
-        Optional<Cliente> existente = clienteRepository.findById(idCliente);
+        Optional<Cliente> existente = buscarPorId(idCliente);
         if (existente.isEmpty()) return false;
 
         Cliente c = existente.get();

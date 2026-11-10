@@ -28,10 +28,8 @@
             lblFecha = new Label();
             dtpFechaNacimiento = new DateTimePicker();
             lblIdPrestamo = new Label();
-            txtIdPrestamo = new TextBox();
             btnGuardar = new Button();
-            lblEstadoRes = new Label();
-            txtEstadoRes = new TextBox();
+            cmbPrestamo = new ComboBox();
             SuspendLayout();
             // 
             // lblId
@@ -125,13 +123,6 @@
             lblIdPrestamo.TabIndex = 10;
             lblIdPrestamo.Text = "ID Préstamo:";
             // 
-            // txtIdPrestamo
-            // 
-            txtIdPrestamo.Location = new Point(200, 280);
-            txtIdPrestamo.Name = "txtIdPrestamo";
-            txtIdPrestamo.Size = new Size(150, 27);
-            txtIdPrestamo.TabIndex = 11;
-            // 
             // btnGuardar
             // 
             btnGuardar.Location = new Point(388, 280);
@@ -142,31 +133,21 @@
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
             // 
-            // lblEstadoRes
+            // cmbPrestamo
             // 
-            lblEstadoRes.AutoSize = true;
-            lblEstadoRes.Location = new Point(58, 238);
-            lblEstadoRes.Name = "lblEstadoRes";
-            lblEstadoRes.Size = new Size(57, 20);
-            lblEstadoRes.TabIndex = 13;
-            lblEstadoRes.Text = "Estado:";
-            // 
-            // txtEstadoRes
-            // 
-            txtEstadoRes.Location = new Point(200, 235);
-            txtEstadoRes.Name = "txtEstadoRes";
-            txtEstadoRes.Size = new Size(125, 27);
-            txtEstadoRes.TabIndex = 14;
+            cmbPrestamo.FormattingEnabled = true;
+            cmbPrestamo.Location = new Point(200, 280);
+            cmbPrestamo.Name = "cmbPrestamo";
+            cmbPrestamo.Size = new Size(151, 28);
+            cmbPrestamo.TabIndex = 15;
             // 
             // GUIAddCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 350);
-            Controls.Add(txtEstadoRes);
-            Controls.Add(lblEstadoRes);
+            Controls.Add(cmbPrestamo);
             Controls.Add(btnGuardar);
-            Controls.Add(txtIdPrestamo);
             Controls.Add(lblIdPrestamo);
             Controls.Add(dtpFechaNacimiento);
             Controls.Add(lblFecha);
@@ -201,7 +182,6 @@
         private Label lblIdPrestamo;
         private TextBox txtIdPrestamo;
         private Button btnGuardar;
-        private Label lblEstadoRes;
-        private TextBox txtEstadoRes;
+        private ComboBox cmbPrestamo;
     }
 }

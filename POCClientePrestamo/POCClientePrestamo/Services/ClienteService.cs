@@ -19,13 +19,13 @@ namespace POCClientePrestamo.services
                 new SystemTextJsonSerializer());
         }
 
-        // 1. LISTAR CLIENTES DE UN PRÉSTAMO
-        public async Task<List<ClienteData>?> ListarClientesPorPrestamoAsync(int idPrestamo)
+        // 1. LISTAR CLIENTES DE UN PRÉSTAMO (Acepta ObjectId como String)
+        public async Task<List<ClienteData>?> ListarClientesPorPrestamoAsync(string idPrestamo)
         {
             var request = new GraphQLRequest
             {
                 Query = @"
-                    query listarClientes ($idPrestamo: Int!) {
+                    query listarClientes ($idPrestamo: String!) {
                         clientesPorPrestamo(idPrestamo: $idPrestamo) {
                             idCliente
                             nombreCompleto
@@ -37,7 +37,7 @@ namespace POCClientePrestamo.services
                         }
                     }
                 ",
-                Variables = new { idPrestamo }
+                Variables = new { idPrestamo } // <-- Se envía el String (ObjectId)
             };
 
             var response = await _client.SendQueryAsync<ResponseListaClientes>(request);
@@ -166,7 +166,7 @@ namespace POCClientePrestamo.services
             return response.Data.EliminarCliente;
         }
 
-        // 7. CONSULTA PERSONALIZADA: Clientes con datos del Préstamo
+        // 7. CONSULTA PERSONALIZADA (Clientes con datos del Préstamo)
         public async Task<List<object>?> ListarClientesConDatosPrestamoAsync()
         {
             var request = new GraphQLRequest
@@ -200,10 +200,10 @@ namespace POCClientePrestamo.services
                         ID = c.idCliente,
                         Nombre = c.nombreCompleto,
                         Cedula = c.cedula,
-                        Ingresos = c.ingresosMensuales,
+                        Ingresos = c.ingresosMensuales.ToString("N2"),
                         FechaNac = c.fechaNacimiento,
                         Estado = c.estado ? "ACTIVO" : "INACTIVO",
-                        MontoPrestamo = c.montoPrestamo,
+                        MontoPrestamo = c.montoPrestamo.ToString("N2"),
                         TipoPrestamo = c.tipoPrestamo
                     });
                 }

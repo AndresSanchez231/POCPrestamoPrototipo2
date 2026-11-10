@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using POCClientePrestamo.services;
 
@@ -13,11 +14,7 @@ namespace POCClientePrestamo
             InitializeComponent();
         }
 
-        // Método que faltaba
-        private void GUIBuscarPrestamo_Load(object sender, EventArgs e)
-        {
-            // Vacío por ahora
-        }
+        private void GUIBuscarPrestamo_Load(object sender, EventArgs e) { }
 
         private async void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -29,26 +26,41 @@ namespace POCClientePrestamo
                     return;
                 }
 
-                var p = await _prestamoService.BuscarPrestamoPorIdAsync(int.Parse(txtIdBuscar.Text));
+                // Ahora enviamos el ID como String (sin int.Parse)
+                var p = await _prestamoService.BuscarPrestamoPorIdAsync(txtIdBuscar.Text);
 
                 if (p == null)
                 {
-                    txtResultado.Text = "No se encontró un préstamo con ese ID.";
+                    MessageBox.Show("No se encontró el préstamo.");
+                    LimpiarCampos();
                     return;
                 }
 
-                txtResultado.Text =
-                    $"ID: {p.idPrestamo}\r\n" +
-                    $"Monto: {p.monto}\r\n" +
-                    $"Tasa Intereses: {p.tasaIntereses}\r\n" +
-                    $"Fecha Registro: {p.fechaRegistro}\r\n" +
-                    $"Tipo: {p.tipo}\r\n" +
-                    $"Estado: {(p.estado ? "ACTIVO" : "INACTIVO")}";
+                var cultura = new CultureInfo("en-US");
+
+                // Asignamos cada atributo a su casilla
+                // txtIdPrestamoRes.Text = p.idPrestamo.ToString(); // <-- COMENTADO: Esta casilla no existe
+                txtMontoRes.Text = p.monto.ToString("N2", cultura);
+                txtTasaRes.Text = p.tasaIntereses.ToString("N2", cultura);
+                txtFechaRes.Text = p.fechaRegistro;
+                txtTipoRes.Text = p.tipo;
+                txtEstadoRes.Text = p.estado ? "ACTIVO" : "INACTIVO";
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtIdBuscar.Clear();
+            // txtIdPrestamoRes.Clear(); // <-- COMENTADO: Esta casilla no existe
+            txtMontoRes.Clear();
+            txtTasaRes.Clear();
+            txtFechaRes.Clear();
+            txtTipoRes.Clear();
+            txtEstadoRes.Clear();
         }
     }
 }

@@ -14,7 +14,6 @@ namespace POCClientePrestamo
             InitializeComponent();
         }
 
-        // Método que faltaba
         private void GUIListarPorFiltro_Load(object sender, EventArgs e)
         {
             // Vacío por ahora
@@ -30,8 +29,20 @@ namespace POCClientePrestamo
                     return;
                 }
 
-                var prestamos = await _prestamoService.ListarPorTipoInmuebleAsync(cmbTipoInmueble.Text);
+                // NORMALIZACIÓN: Convertimos el texto a "Casa", "Apartamento" o "Local Comercial"
+                string tipoSeleccionado = cmbTipoInmueble.Text.Trim();
+                if (tipoSeleccionado.ToUpper() == "CASA")
+                    tipoSeleccionado = "Casa";
+                else if (tipoSeleccionado.ToUpper() == "APARTAMENTO")
+                    tipoSeleccionado = "Apartamento";
+                else if (tipoSeleccionado.ToUpper() == "LOCAL COMERCIAL")
+                    tipoSeleccionado = "Local Comercial";
+
+                var prestamos = await _prestamoService.ListarPorTipoInmuebleAsync(tipoSeleccionado);
+
                 dgvFiltro.DataSource = null;
+                dgvFiltro.Columns.Clear();
+                dgvFiltro.AutoGenerateColumns = true;
 
                 if (prestamos == null || prestamos.Count == 0)
                 {
@@ -45,8 +56,8 @@ namespace POCClientePrestamo
                     lista.Add(new
                     {
                         ID = p.idPrestamo,
-                        Monto = p.monto,
-                        Tasa = p.tasaIntereses,
+                        Monto = p.monto.ToString("N2"), // Formato decimal
+                        Tasa = p.tasaIntereses.ToString("N2"), // Formato decimal
                         Fecha = p.fechaRegistro,
                         TipoInmueble = p.tipo,
                         Estado = p.estado ? "ACTIVO" : "INACTIVO"

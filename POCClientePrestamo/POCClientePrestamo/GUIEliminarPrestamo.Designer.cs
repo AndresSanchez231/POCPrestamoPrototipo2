@@ -17,169 +17,170 @@
 
         private void InitializeComponent()
         {
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblMonto = new System.Windows.Forms.Label();
-            this.txtMonto = new System.Windows.Forms.TextBox();
-            this.lblTasa = new System.Windows.Forms.Label();
-            this.txtTasa = new System.Windows.Forms.TextBox();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.txtTipo = new System.Windows.Forms.TextBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            lblId = new Label();
+            txtId = new TextBox();
+            btnBuscar = new Button();
+            lblMonto = new Label();
+            txtMonto = new TextBox();
+            lblTasa = new Label();
+            txtTasa = new TextBox();
+            lblFecha = new Label();
+            txtFecha = new TextBox();
+            lblTipo = new Label();
+            txtTipo = new TextBox();
+            lblEstado = new Label();
+            txtEstado = new TextBox();
+            btnEliminar = new Button();
+            SuspendLayout();
             // 
             // lblId
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(40, 30);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(90, 20);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "ID Préstamo:";
+            lblId.AutoSize = true;
+            lblId.Location = new Point(40, 30);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(93, 20);
+            lblId.TabIndex = 0;
+            lblId.Text = "ID Préstamo:";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(160, 27);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(150, 27);
-            this.txtId.TabIndex = 1;
+            txtId.Location = new Point(160, 27);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(150, 27);
+            txtId.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(330, 25);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            btnBuscar.Location = new Point(330, 25);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(100, 30);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // lblMonto
             // 
-            this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(40, 80);
-            this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(56, 20);
-            this.lblMonto.TabIndex = 3;
-            this.lblMonto.Text = "Monto:";
+            lblMonto.AutoSize = true;
+            lblMonto.Location = new Point(40, 80);
+            lblMonto.Name = "lblMonto";
+            lblMonto.Size = new Size(56, 20);
+            lblMonto.TabIndex = 3;
+            lblMonto.Text = "Monto:";
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(160, 77);
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.ReadOnly = true;
-            this.txtMonto.Size = new System.Drawing.Size(270, 27);
-            this.txtMonto.TabIndex = 4;
+            txtMonto.Location = new Point(160, 77);
+            txtMonto.Name = "txtMonto";
+            txtMonto.ReadOnly = true;
+            txtMonto.Size = new Size(270, 27);
+            txtMonto.TabIndex = 4;
             // 
             // lblTasa
             // 
-            this.lblTasa.AutoSize = true;
-            this.lblTasa.Location = new System.Drawing.Point(40, 120);
-            this.lblTasa.Name = "lblTasa";
-            this.lblTasa.Size = new System.Drawing.Size(106, 20);
-            this.lblTasa.TabIndex = 5;
-            this.lblTasa.Text = "Tasa Intereses:";
+            lblTasa.AutoSize = true;
+            lblTasa.Location = new Point(40, 120);
+            lblTasa.Name = "lblTasa";
+            lblTasa.Size = new Size(102, 20);
+            lblTasa.TabIndex = 5;
+            lblTasa.Text = "Tasa Intereses:";
             // 
             // txtTasa
             // 
-            this.txtTasa.Location = new System.Drawing.Point(160, 117);
-            this.txtTasa.Name = "txtTasa";
-            this.txtTasa.ReadOnly = true;
-            this.txtTasa.Size = new System.Drawing.Size(270, 27);
-            this.txtTasa.TabIndex = 6;
+            txtTasa.Location = new Point(160, 117);
+            txtTasa.Name = "txtTasa";
+            txtTasa.ReadOnly = true;
+            txtTasa.Size = new Size(270, 27);
+            txtTasa.TabIndex = 6;
             // 
             // lblFecha
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(40, 160);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(107, 20);
-            this.lblFecha.TabIndex = 7;
-            this.lblFecha.Text = "Fecha Registro:";
+            lblFecha.AutoSize = true;
+            lblFecha.Location = new Point(40, 160);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(109, 20);
+            lblFecha.TabIndex = 7;
+            lblFecha.Text = "Fecha Registro:";
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(160, 157);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.ReadOnly = true;
-            this.txtFecha.Size = new System.Drawing.Size(270, 27);
-            this.txtFecha.TabIndex = 8;
+            txtFecha.Location = new Point(160, 157);
+            txtFecha.Name = "txtFecha";
+            txtFecha.ReadOnly = true;
+            txtFecha.Size = new Size(270, 27);
+            txtFecha.TabIndex = 8;
             // 
             // lblTipo
             // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(40, 200);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(105, 20);
-            this.lblTipo.TabIndex = 9;
-            this.lblTipo.Text = "Tipo Inmueble:";
+            lblTipo.AutoSize = true;
+            lblTipo.Location = new Point(40, 200);
+            lblTipo.Name = "lblTipo";
+            lblTipo.Size = new Size(108, 20);
+            lblTipo.TabIndex = 9;
+            lblTipo.Text = "Tipo Inmueble:";
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(160, 197);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.ReadOnly = true;
-            this.txtTipo.Size = new System.Drawing.Size(270, 27);
-            this.txtTipo.TabIndex = 10;
+            txtTipo.Location = new Point(160, 197);
+            txtTipo.Name = "txtTipo";
+            txtTipo.ReadOnly = true;
+            txtTipo.Size = new Size(270, 27);
+            txtTipo.TabIndex = 10;
+            txtTipo.TextChanged += txtTipo_TextChanged;
             // 
             // lblEstado
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(40, 240);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(55, 20);
-            this.lblEstado.TabIndex = 11;
-            this.lblEstado.Text = "Estado:";
+            lblEstado.AutoSize = true;
+            lblEstado.Location = new Point(40, 240);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(57, 20);
+            lblEstado.TabIndex = 11;
+            lblEstado.Text = "Estado:";
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(160, 237);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.ReadOnly = true;
-            this.txtEstado.Size = new System.Drawing.Size(270, 27);
-            this.txtEstado.TabIndex = 12;
+            txtEstado.Location = new Point(160, 237);
+            txtEstado.Name = "txtEstado";
+            txtEstado.ReadOnly = true;
+            txtEstado.Size = new Size(270, 27);
+            txtEstado.TabIndex = 12;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(330, 290);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 35);
-            this.btnEliminar.TabIndex = 13;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            btnEliminar.Enabled = false;
+            btnEliminar.Location = new Point(330, 290);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(100, 35);
+            btnEliminar.TabIndex = 13;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // GUIEliminarPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 360);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.txtTipo);
-            this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.txtFecha);
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.txtTasa);
-            this.Controls.Add(this.lblTasa);
-            this.Controls.Add(this.txtMonto);
-            this.Controls.Add(this.lblMonto);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lblId);
-            this.Name = "GUIEliminarPrestamo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Eliminar Préstamo";
-            this.Load += new System.EventHandler(this.GUIEliminarPrestamo_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(500, 360);
+            Controls.Add(btnEliminar);
+            Controls.Add(txtEstado);
+            Controls.Add(lblEstado);
+            Controls.Add(txtTipo);
+            Controls.Add(lblTipo);
+            Controls.Add(txtFecha);
+            Controls.Add(lblFecha);
+            Controls.Add(txtTasa);
+            Controls.Add(lblTasa);
+            Controls.Add(txtMonto);
+            Controls.Add(lblMonto);
+            Controls.Add(btnBuscar);
+            Controls.Add(txtId);
+            Controls.Add(lblId);
+            Name = "GUIEliminarPrestamo";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Eliminar Préstamo";
+            Load += GUIEliminarPrestamo_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
