@@ -1,0 +1,28 @@
+type Pago {
+    idPago: Int
+    monto: Float
+    metodoPago: String
+    fechaPago: String
+    idPrestamo: Int
+    estado: Boolean # <-- NUEVO
+}
+
+input PagoInput {
+    idPago: Int!
+    monto: Float!
+    metodoPago: String!
+    fechaPago: String!
+    idPrestamo: Int!
+    estado: Boolean! # <-- NUEVO
+}
+
+type Query {
+    pagosPorPrestamo(idPrestamo: Int!): [Pago]
+    pagoPorId(idPago: Int!): Pago
+}
+
+type Mutation {
+    addPago(input: PagoInput!): Pago
+    actualizarPago(idPago: Int!, input: PagoInput!): Pago
+    eliminarPago(idPago: Int!): Boolean
+}

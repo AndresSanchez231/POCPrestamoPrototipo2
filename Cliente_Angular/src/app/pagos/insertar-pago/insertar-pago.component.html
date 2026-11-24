@@ -1,0 +1,30 @@
+<div style="padding: 20px; max-width: 500px; margin: auto;">
+  <h2>Insertar Pago</h2>
+  <div *ngIf="error" style="color: red; margin-bottom: 10px; font-weight: bold;">{{ error }}</div>
+  <div *ngIf="mensaje" style="color: green; margin-bottom: 10px; font-weight: bold;">{{ mensaje }}</div>
+
+  <div style="display: grid; gap: 15px;">
+    <div><label>ID Pago:</label><input type="number" [(ngModel)]="idPago" style="width: 100%; padding: 5px;"></div>
+    <div><label>Monto:</label><input type="number" step="0.01" [(ngModel)]="monto" style="width: 100%; padding: 5px;"></div>
+    <div>
+      <label>Método de Pago:</label>
+      <select [(ngModel)]="metodoPago" style="width: 100%; padding: 5px;">
+        <option value="" disabled selected>Seleccione un método</option>
+        <option value="Efectivo">Efectivo</option>
+        <option value="Tarjeta">Tarjeta</option>
+        <option value="Transferencia">Transferencia</option>
+      </select>
+    </div>
+    <div><label>Fecha de Pago:</label><input type="datetime-local" [(ngModel)]="fechaPago" style="width: 100%; padding: 5px;"></div>
+    <div><label>ID Préstamo:</label><input type="number" [(ngModel)]="idPrestamo" style="width: 100%; padding: 5px;"></div>
+    <div><label><input type="checkbox" [(ngModel)]="estado"> Estado (Activo)</label></div>
+    <div><button (click)="guardar()" style="padding: 10px 20px; background-color: #3f51b5; color: white; border: none; border-radius: 5px; cursor: pointer;">Guardar Pago</button></div>
+  </div>
+
+  <!-- BOTÓN VOLVER AL MENÚ -->
+  <div style="margin-top: 30px; text-align: center;">
+    <button (click)="volverAlMenu()" style="padding: 10px 20px; background-color: #607d8b; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Volver al Menú Principal
+    </button>
+  </div>
+</div>

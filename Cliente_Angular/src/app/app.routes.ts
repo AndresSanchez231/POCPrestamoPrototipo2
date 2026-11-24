@@ -14,6 +14,13 @@ import { ActualizarClienteComponent } from './clientes/actualizar-cliente/actual
 import { EliminarClienteComponent } from './clientes/eliminar-cliente/eliminar-cliente.component';
 import { ListarClientesConPrestamoComponent } from './clientes/listar-clientes-con-prestamo/listar-clientes-con-prestamo.component';
 
+// NUEVOS IMPORTS PARA PAGOS
+import { InsertarPagoComponent } from './pagos/insertar-pago/insertar-pago.component';
+import { ListarPagosComponent } from './pagos/listar-pagos/listar-pagos.component';
+import { BuscarPagoComponent } from './pagos/buscar-pago/buscar-pago.component';
+import { ActualizarPagoComponent } from './pagos/actualizar-pago/actualizar-pago.component';
+import { EliminarPagoComponent } from './pagos/eliminar-pago/eliminar-pago.component';
+
 export const routes: Routes = [
   { path: '', component: MenuComponent },
   
@@ -36,5 +43,13 @@ export const routes: Routes = [
   // RUTA NUEVA (Consulta Personalizada)
   { path: 'clientes/listar-con-prestamo', component: ListarClientesConPrestamoComponent },
   
+  // NUEVAS RUTAS PARA PAGOS
+  { path: 'pagos/insertar', component: InsertarPagoComponent },
+  { path: 'pagos/listar', component: ListarPagosComponent },
+  { path: 'pagos/buscar', component: BuscarPagoComponent },
+  { path: 'pagos/actualizar', component: ActualizarPagoComponent },
+  { path: 'pagos/eliminar', component: EliminarPagoComponent },
+  
+  // Redirección por defecto si la ruta no existe
   { path: '**', redirectTo: '' }
 ];

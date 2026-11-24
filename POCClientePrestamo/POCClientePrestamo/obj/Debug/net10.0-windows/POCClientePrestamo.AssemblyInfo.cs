@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("POCClientePrestamo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+717f2f0e0f5f880d59b9e1d4e292016b542551b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b31717ae42d1f8a19a2ce1e1359ac36c01535883")]
 [assembly: System.Reflection.AssemblyProductAttribute("POCClientePrestamo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("POCClientePrestamo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -43,26 +43,49 @@ export class InsertarClienteComponent implements OnInit {
   guardar() {
     this.error = ''; this.mensaje = '';
     
+    // 1. Validar campos vacíos
     if (!this.idCliente || !this.nombreCompleto || !this.cedula || !this.ingresosMensuales || !this.fechaNacimiento || !this.idPrestamo) {
       this.error = 'Todos los campos son obligatorios.';
       return;
     }
 
+    // 2. Validar nombre sin números
     if (/\d/.test(this.nombreCompleto)) {
       this.error = 'El nombre no puede contener números. Ingrese solo letras.';
       return;
     }
 
+    // 3. Validar cédula solo números
     if (!/^\d+$/.test(this.cedula)) {
       this.error = 'La cédula debe contener solo números (no se permiten letras).';
       return;
     }
 
+    // 4. Validar ingresos numéricos
     if (isNaN(Number(this.ingresosMensuales))) {
       this.error = 'Los ingresos mensuales deben ser un número válido (no se permiten letras).';
       return;
     }
 
+    // 5. VALIDACIÓN PREVIA: Verificar si el cliente ya existe
+    this.clienteService.buscarCliente(this.idCliente).subscribe({
+      next: (res: any) => {
+        if (res.data.clientePorId != null) {
+          this.error = `El cliente con ID ${this.idCliente} ya existe. Por favor, use otro.`;
+          return;
+        }
+        
+        // Si no existe, procedemos a insertar
+        this.insertarCliente();
+      },
+      error: () => {
+        // Si hay error en la búsqueda (ej. no encontrado), igual intentamos insertar
+        this.insertarCliente();
+      }
+    });
+  }
+
+  private insertarCliente() {
     const input = {
       idCliente: Number(this.idCliente),
       nombreCompleto: this.nombreCompleto,
@@ -79,15 +102,9 @@ export class InsertarClienteComponent implements OnInit {
         this.limpiar();
       },
       error: (err) => {
-        // Si el servidor no da el mensaje real, lo manejamos aquí
         let errorMsg = err.message || '';
-        
         if (errorMsg.includes('INTERNAL_ERROR')) {
           this.error = 'El préstamo seleccionado está INACTIVO. No se pueden agregar clientes.';
-        } else if (errorMsg.includes('ya existe')) {
-          this.error = `El cliente con ID ${this.idCliente} ya existe.`;
-        } else if (errorMsg.includes('no existe')) {
-          this.error = 'El préstamo seleccionado no existe.';
         } else {
           this.error = errorMsg;
         }

@@ -86,4 +86,12 @@ public class ServicioPrestamo {
         prestamoRepository.save(p);
         return true;
     }
+
+    // ==========================================
+    // NUEVO MÉTODO: Validación por ID de negocio
+    // ==========================================
+    public boolean existePrestamoPorIdNegocio(int idPrestamo) {
+        Query query = new Query(Criteria.where("idPrestamo").is(idPrestamo));
+        return mongoTemplate.exists(query, Prestamo.class);
+    }
 }

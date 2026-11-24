@@ -1,0 +1,21 @@
+<div style="padding: 20px; max-width: 500px;">
+  <h2>Buscar Pago</h2>
+  <input type="number" [(ngModel)]="id" placeholder="ID Pago">
+  <button (click)="buscar()">Buscar</button>
+  <div *ngIf="error" style="color:red;">{{ error }}</div>
+  
+  <div *ngIf="pago" style="margin-top: 20px;">
+    <p><strong>ID:</strong> {{pago.idPago}}</p>
+    <p><strong>Monto:</strong> {{pago.monto}}</p>
+    <p><strong>Método:</strong> {{pago.metodoPago}}</p>
+    <p><strong>Fecha:</strong> {{pago.fechaPago}}</p>
+    <p><strong>ID Préstamo:</strong> {{pago.idPrestamo}}</p>
+    <p><strong>Estado:</strong> {{pago.estado ? 'ACTIVO' : 'INACTIVO'}}</p>
+  </div>
+
+  <div style="margin-top: 30px; text-align: center;">
+    <button (click)="volverAlMenu()" style="padding: 10px 20px; background-color: #607d8b; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Volver al Menú Principal
+    </button>
+  </div>
+</div>

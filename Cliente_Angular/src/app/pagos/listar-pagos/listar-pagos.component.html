@@ -1,0 +1,43 @@
+<div style="padding: 20px;">
+  <h2>Listar Pagos por Préstamo</h2>
+
+  <div style="margin-bottom: 15px;">
+    <label>ID del Préstamo a consultar:</label>
+    <input type="number" [(ngModel)]="idPrestamo" style="padding: 5px; margin-right: 10px;">
+    <button (click)="listar()" style="padding: 5px 15px; cursor: pointer;">Filtrar</button>
+  </div>
+
+  <div *ngIf="error" style="color: red; margin-bottom: 10px;">{{ error }}</div>
+
+  <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;" *ngIf="pagos.length > 0">
+    <thead>
+      <tr style="background-color: #3f51b5; color: white;">
+        <th style="padding: 10px;">ID Pago</th>
+        <th style="padding: 10px;">Monto</th>
+        <th style="padding: 10px;">Método</th>
+        <th style="padding: 10px;">Fecha</th>
+        <th style="padding: 10px;">ID Préstamo</th>
+        <th style="padding: 10px;">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pagos">
+        <td style="padding: 8px;">{{p.idPago}}</td>
+        <td style="padding: 8px;">{{p.monto | number:'1.2-2'}}</td>
+        <td style="padding: 8px;">{{p.metodoPago}}</td>
+        <td style="padding: 8px;">{{p.fechaPago | date:'short'}}</td>
+        <td style="padding: 8px;">{{p.idPrestamo}}</td>
+        <td style="padding: 8px;">{{p.estado ? 'ACTIVO' : 'INACTIVO'}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="pagos.length === 0 && !error" style="margin-top: 20px;">
+    No hay pagos registrados para este préstamo.
+  </div>
+
+  <div style="margin-top: 30px; text-align: center;">
+    <button (click)="volverAlMenu()" style="padding: 10px 20px; background-color: #607d8b; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Volver al Menú Principal
+    </button>
+  </div>
+</div>

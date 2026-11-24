@@ -30,6 +30,16 @@ type ClienteConPrestamo {
     tipoPrestamo: String
 }
 
+# NUEVO TIPO: Pago (Clase C)
+type Pago {
+    idPago: Int
+    monto: Float
+    metodoPago: String
+    fechaPago: String
+    idPrestamo: Int
+    estado: Boolean # <-- NUEVO
+}
+
 input ClienteInput {
     idCliente: Int!
     nombreCompleto: String!
@@ -49,14 +59,28 @@ input PrestamoInput {
     estado: Boolean!
 }
 
+# NUEVO INPUT: PagoInput
+input PagoInput {
+    idPago: Int!
+    monto: Float!
+    metodoPago: String!
+    fechaPago: String!
+    idPrestamo: Int!
+    estado: Boolean! # <-- NUEVO
+}
+
 type Query {
     prestamos: [Prestamo]
-    prestamoPorId(idPrestamo: Int!): Prestamo  # <-- AHORA ES Int!
+    prestamoPorId(idPrestamo: Int!): Prestamo
     prestamosPorTipoInmueble(tipoInmueble: String!): [Prestamo]
     clientes: [Cliente]
     clientesPorPrestamo(idPrestamo: String!): [Cliente]
     clientePorId(idCliente: Int!): Cliente
     clientesConDatosPrestamo: [ClienteConPrestamo]
+
+    # NUEVAS QUERIES PARA PAGO
+    pagosPorPrestamo(idPrestamo: Int!): [Pago]
+    pagoPorId(idPago: Int!): Pago
 }
 
 type Mutation {
@@ -66,4 +90,9 @@ type Mutation {
     addCliente(input: ClienteInput!): Cliente
     actualizarCliente(idCliente: Int!, input: ClienteInput!): Cliente
     eliminarCliente(idCliente: Int!): Boolean
+
+    # NUEVAS MUTATIONS PARA PAGO
+    addPago(input: PagoInput!): Pago
+    actualizarPago(idPago: Int!, input: PagoInput!): Pago
+    eliminarPago(idPago: Int!): Boolean
 }

@@ -1,0 +1,32 @@
+<div style="padding: 20px; max-width: 500px;">
+  <h2>Eliminar Pago (Búsqueda Previa)</h2>
+  
+  <div style="margin-bottom: 20px;">
+    <input type="number" [(ngModel)]="id" placeholder="ID Pago" style="padding: 5px;">
+    <button (click)="buscar()" style="padding: 5px 15px; margin-left: 10px;">Buscar</button>
+  </div>
+
+  <div *ngIf="error" style="color:red; margin-bottom: 10px;">{{ error }}</div>
+  <div *ngIf="mensaje" style="color:green; margin-bottom: 10px;">{{ mensaje }}</div>
+  
+  <div *ngIf="pago" style="margin-top: 20px; border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+    <p><strong>ID Pago:</strong> {{ pago.idPago }}</p>
+    <p><strong>Monto:</strong> {{ pago.monto }}</p>
+    <p><strong>Método:</strong> {{ pago.metodoPago }}</p>
+    <p><strong>Fecha:</strong> {{ pago.fechaPago }}</p>
+    <p><strong>ID Préstamo:</strong> {{ pago.idPrestamo }}</p>
+    <p><strong>Estado:</strong> {{ pago.estado ? 'ACTIVO' : 'INACTIVO' }}</p>
+
+    <div style="margin-top: 15px;">
+      <button (click)="eliminar()" [disabled]="!pago.estado" style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" [style.opacity]="!pago.estado ? '0.5' : '1'">
+        Desactivar Pago
+      </button>
+    </div>
+  </div>
+
+  <div style="margin-top: 30px; text-align: center;">
+    <button (click)="volverAlMenu()" style="padding: 10px 20px; background-color: #607d8b; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Volver al Menú Principal
+    </button>
+  </div>
+</div>
